@@ -4,7 +4,10 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useMemo, useState } from "react";
 import { Menu, X } from "lucide-react";
+import {
+    Button
 
+} from "../ui/Button";
 const NAV = [
     { href: "/", label: "Start" },
     { href: "/services", label: "Leistungen" },
@@ -83,14 +86,9 @@ export function Header() {
                     </nav>
 
                     {/* CTAs */}
-                    <div className="hidden md:flex items-center gap-3">
-                        <button
-                            onClick={() => setIsOpen(true)}
-                            className="group inline-flex items-center gap-2 rounded-lg bg-brand-accent px-4 py-2 text-sm font-semibold text-white transition hover:opacity-90"
-                        >
-                            Projekt starten 🚀
-                        </button>
-                    </div>
+                    <Button variant="outline" onClick={() => setIsOpen(true)}>
+                        Projekt starten 🚀
+                    </Button>
 
                     {/* Mobile toggle */}
                     <button

@@ -19,7 +19,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       primary:
         "bg-brand-accent text-white hover:opacity-90",
       outline:
-        "border border-brand-accent text-foreground hover:bg-brand-accent hover:text-white",
+        "border-2 border-brand-accent text-foreground hover:bg-brand-accent hover:text-white",
     };
 
     const styles = cn(base, variants[variant], className);
