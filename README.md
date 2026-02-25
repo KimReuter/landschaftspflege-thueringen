@@ -1,60 +1,36 @@
-# 🌿 Landschaftspflege Thüringen
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-Moderne Website für einen regionalen Garten- und Landschaftsbaubetrieb in Thüringen.  
-Fokus: **Privatkunden**, Vertrauen, Sicherheit und direkte Kontaktaufnahme per Telefon oder WhatsApp.
+## Getting Started
 
----
+First, run the development server:
 
-## 🎯 Ziel der Website
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
 
-- Generierung von Anfragen
-- Direkte Kontaktaufnahme (Anruf / WhatsApp)
-- Vertrauensaufbau durch klare Struktur und professionelle Darstellung
-- Präsentation der Leistungsvielfalt
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
----
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-## 🛠 Leistungen
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-- Garten- und Landschaftsbau
-- Pflasterarbeiten
-- Erdarbeiten
-- Zaunbau
-- Grünpflege
-- Rodungsarbeiten
-- Individuelle Handwerksleistungen
+## Learn More
 
----
+To learn more about Next.js, take a look at the following resources:
 
-## 💡 Positionierung
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-Ein zuverlässiger Allround-Handwerksbetrieb mit breitem Leistungsspektrum.  
-Regional verwurzelt. Präzise. Termintreu. Lösungsorientiert.
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
----
+## Deploy on Vercel
 
-## 📱 Call-to-Action
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Primäre Kontaktwege:
-
-- 📞 Telefon
-- 💬 WhatsApp
-
-Maximale Sichtbarkeit der Kontaktmöglichkeiten auf jeder Seite.
-
----
-
-## ⚙️ Technischer Fokus
-
-- Mobile First
-- Schnelle Ladezeit
-- Klare Conversion-Struktur
-- SEO-optimierte Seitenstruktur
-- Sauberer, wartbarer Code
-
----
-
-## 🚀 Projektvision
-
-Ziel ist der Aufbau einer digitalen Präsenz, die nicht nur informiert,  
-sondern aktiv Anfragen generiert und Vertrauen schafft.
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
