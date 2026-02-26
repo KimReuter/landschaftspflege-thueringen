@@ -49,7 +49,7 @@ export function Header() {
 
     return (
         <header className={headerClass}>
-            <div className="mx-auto max-w-6xl px-4">
+            <div className="relative mx-auto max-w-6xl px-4">
                 <div className="flex h-16 items-center justify-between">
                     {/* Brand */}
                     <Link href="/" className="flex items-center gap-2">
@@ -85,10 +85,12 @@ export function Header() {
                         })}
                     </nav>
 
-                    {/* CTAs */}
-                    <Button variant="outline" onClick={() => setIsOpen(true)}>
-                        Projekt starten 🚀
-                    </Button>
+                    {/* Desktop CTA (mobile: hidden) */}
+                    <div className="hidden md:block">
+                        <Button variant="outline" onClick={() => setIsOpen(true)}>
+                            Projekt starten 🚀
+                        </Button>
+                    </div>
 
                     {/* Mobile toggle */}
                     <button
@@ -111,8 +113,8 @@ export function Header() {
 
                 {/* Mobile menu */}
                 {mobileOpen && (
-                    <div className="md:hidden pb-4">
-                        <div className={["rounded-xl border p-3", scrolled ? "bg-surface-2 border-border" : "bg-surface/70 border-white/10"].join(" ")}>
+                    <div className="md:hidden absolute left-0 right-0 top-16 z-50 px-4">
+                        <div className="rounded-2xl border border-border bg-surface-2 p-4 shadow-xl">
                             <div className="flex flex-col gap-2">
                                 {NAV.map((item) => {
                                     const active = isActive(pathname, item.href);
@@ -122,14 +124,15 @@ export function Header() {
                                             href={item.href}
                                             className={[
                                                 "rounded-lg px-3 py-2 text-sm font-semibold",
-                                                active ? "text-brand-accent" : scrolled ? "text-foreground" : "text-white",
-                                                scrolled ? "hover:bg-surface" : "hover:bg-white/10",
+                                                active ? "text-brand-accent" : "text-foreground",
+                                                "hover:bg-surface",
                                             ].join(" ")}
                                         >
                                             {item.label}
                                         </Link>
                                     );
                                 })}
+
                                 <div className="mt-2 flex gap-2">
                                     <a
                                         href="tel:+4915234002234"
