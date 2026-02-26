@@ -2,15 +2,22 @@
 
 :root {
   /* Brand palette */
-  --brand-primary: #3F3916;   /* moss green */
-  --brand-secondary: #71654C; /* earth taupe */
-  --brand-accent: #AB561B;    /* terracotta (CTA) */
-  --brand-bg: #E0DBD2;        /* warm off-white */
-  --brand-ink: #252009;       /* warm near-black */
+  --brand-primary: #3F3916;
+  /* moss green */
+  --brand-secondary: #71654C;
+  /* earth taupe */
+  --brand-accent: #AB561B;
+  /* terracotta (CTA) */
+  --brand-bg: #E0DBD2;
+  /* warm off-white */
+  --brand-ink: #252009;
+  /* warm near-black */
 
   /* Dark UI foundation (anthracite, warm) */
-  --surface: #14120F;         /* main background */
-  --surface-2: #1C1914;       /* elevated (header, cards) */
+  --surface: #14120F;
+  /* main background */
+  --surface-2: #1C1914;
+  /* elevated (header, cards) */
   --border: #2A251D;
   --text: #F5F1EA;
   --muted: #C9C1B6;
@@ -21,28 +28,31 @@
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-
-  /* Brand utilities */
-  --color-brand-primary: var(--brand-primary);
-  --color-brand-secondary: var(--brand-secondary);
-  --color-brand-accent: var(--brand-accent);
-  --color-brand-bg: var(--brand-bg);
-  --color-brand-ink: var(--brand-ink);
-
-  /* UI utilities */
-  --color-surface: var(--surface);
-  --color-surface-2: var(--surface-2);
-  --color-border: var(--border);
-  --color-muted: var(--muted);
-
+  /* fonts (kommen aus next/font variables) */
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-serif: var(--font-serif);
+
+  /* type scale */
+  --text-h1: clamp(2.25rem, 4vw, 3.75rem);
+  --text-h2: clamp(1.5rem, 2.2vw, 2.25rem);
+  --text-h3: 1.125rem;
+  --text-body: 1rem;
+  --text-small: 0.875rem;
+
+  /* line heights */
+  --lh-tight: 1.1;
+  --lh-snug: 1.25;
+  --lh-normal: 1.6;
+
+  /* letter spacing */
+  --track-tight: -0.02em;
+  --track-wide: 0.06em;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+  line-height: var(--lh-normal);
 }
