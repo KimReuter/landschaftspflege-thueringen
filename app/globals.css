@@ -1,58 +1,71 @@
 @import "tailwindcss";
 
 :root {
-  /* Brand palette */
+  /* Brand */
   --brand-primary: #3F3916;
-  /* moss green */
   --brand-secondary: #71654C;
-  /* earth taupe */
   --brand-accent: #AB561B;
-  /* terracotta (CTA) */
-  --brand-bg: #E0DBD2;
-  /* warm off-white */
-  --brand-ink: #252009;
-  /* warm near-black */
 
-  /* Dark UI foundation (anthracite, warm) */
+  /* Dark UI */
   --surface: #14120F;
-  /* main background */
   --surface-2: #1C1914;
-  /* elevated (header, cards) */
   --border: #2A251D;
-  --text: #F5F1EA;
+  --foreground: #F5F1EA;
   --muted: #C9C1B6;
 
-  /* App tokens */
-  --background: var(--surface);
-  --foreground: var(--text);
-}
-
-@theme inline {
-  /* fonts (kommen aus next/font variables) */
+  /* Fonts (kommen aus next/font variables) */
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
   --font-serif: var(--font-serif);
-
-  /* type scale */
-  --text-h1: clamp(2.25rem, 4vw, 3.75rem);
-  --text-h2: clamp(1.5rem, 2.2vw, 2.25rem);
-  --text-h3: 1.125rem;
-  --text-body: 1rem;
-  --text-small: 0.875rem;
-
-  /* line heights */
-  --lh-tight: 1.1;
-  --lh-snug: 1.25;
-  --lh-normal: 1.6;
-
-  /* letter spacing */
-  --track-tight: -0.02em;
-  --track-wide: 0.06em;
+  /* nur wenn du das im layout wirklich setzt */
 }
 
 body {
-  background: var(--background);
+  background: var(--surface);
   color: var(--foreground);
   font-family: var(--font-sans);
-  line-height: var(--lh-normal);
+  line-height: 1.6;
+}
+
+/* Stable token utilities (Tailwind-safe, always works) */
+@layer utilities {
+  .bg-surface {
+    background-color: var(--surface);
+  }
+
+  .bg-surface-2 {
+    background-color: var(--surface-2);
+  }
+
+  .bg-brand-accent {
+    background-color: var(--brand-accent);
+  }
+
+  .text-foreground {
+    color: var(--foreground);
+  }
+
+  .text-muted {
+    color: var(--muted);
+  }
+
+  .text-brand-accent {
+    color: var(--brand-accent);
+  }
+
+  .border-border {
+    border-color: var(--border);
+  }
+
+  .border-brand-accent {
+    border-color: var(--brand-accent);
+  }
+
+  .hover\:bg-brand-accent:hover {
+    background-color: var(--brand-accent);
+  }
+
+  .hover\:text-white:hover {
+    color: #fff;
+  }
 }

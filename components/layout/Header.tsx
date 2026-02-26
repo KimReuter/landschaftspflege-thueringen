@@ -4,10 +4,8 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useMemo, useState } from "react";
 import { Menu, X } from "lucide-react";
-import {
-    Button
+import { Button } from "../ui/Button";
 
-} from "../ui/Button";
 const NAV = [
     { href: "/", label: "Start" },
     { href: "/services", label: "Leistungen" },
@@ -43,7 +41,7 @@ export function Header() {
         // On scroll: anthracite surface + subtle border
         return [
             "fixed inset-x-0 top-0 z-50 transition-colors duration-200",
-            scrolled ? "bg-surface/95 backdrop-blur border-b border-border" : "bg-transparent",
+            scrolled ? "bg-surface-2 shadow-lg shadow-black/20" : "bg-transparent",
         ].join(" ");
     }, [scrolled]);
 
@@ -73,10 +71,10 @@ export function Header() {
                                     key={item.href}
                                     href={item.href}
                                     className={[
-                                        "inline-block text-sm font-semibold transition-transform duration-200 origin-center will-change-transform",
+                                        "inline-block text-sm font-semibold transition-all duration-200 origin-center will-change-transform",
                                         scrolled ? "text-foreground/90" : "text-white/90",
-                                        "hover:text-brand-accent hover:scale-115",
-                                        active ? "text-brand-accent" : "",
+                                        "hover:text-[var(--brand-accent)] hover:scale-110",
+                                        active ? "text-[var(--brand-accent)]" : "",
                                     ].join(" ")}
                                 >
                                     {item.label}
@@ -124,7 +122,7 @@ export function Header() {
                                             href={item.href}
                                             className={[
                                                 "rounded-lg px-3 py-2 text-sm font-semibold",
-                                                active ? "text-brand-accent" : "text-foreground",
+                                                active ? "text-[var(--brand-accent)]" : "text-foreground",
                                                 "hover:bg-surface",
                                             ].join(" ")}
                                         >
