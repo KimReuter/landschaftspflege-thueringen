@@ -1,23 +1,43 @@
 @import "tailwindcss";
 
-:root {
-  /* Brand */
-  --brand-primary: #3F3916;
-  --brand-secondary: #71654C;
-  --brand-accent: #AB561B;
+@theme {
+  /* Farben */
+  --color-surface: #14120F;
+  --color-surface-2: #1C1914;
+  --color-foreground: #F5F1EA;
+  --color-muted: #C9C1B6;
+  --color-brand-accent: #AB561B;
+  --color-brand-primary: #3F3916;
+  --color-brand-secondary: #71654C;
+  --color-border: #2A251D;
 
-  /* Dark UI */
-  --surface: #14120F;
-  --surface-2: #1C1914;
-  --border: #2A251D;
-  --foreground: #F5F1EA;
-  --muted: #C9C1B6;
-
-  /* Fonts (kommen aus next/font variables) */
+  /* Fonts */
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-  --font-serif: var(--font-serif);
-  /* nur wenn du das im layout wirklich setzt */
+  --font-serif-display: var(--font-serif-display);
+  /* passt zu Type.tsx */
+}
+
+:root {
+  --text-h1: clamp(2.25rem, 4vw, 3.75rem);
+  --text-h2: clamp(1.5rem, 2.2vw, 2.25rem);
+  --text-h3: 1.125rem;
+  --text-body: 1rem;
+  --text-small: 0.875rem;
+  --lh-tight: 1.1;
+  --lh-snug: 1.25;
+  --lh-normal: 1.6;
+  --track-tight: -0.02em;
+  --track-wide: 0.06em;
+
+  --surface: var(--color-surface);
+  --surface-2: var(--color-surface-2);
+  --foreground: var(--color-foreground);
+  --muted: var(--color-muted);
+  --border: var(--color-border);
+  --brand-accent: var(--color-brand-accent);
+  --brand-primary: var(--color-brand-primary);
+  --brand-secondary: var(--color-brand-secondary);
 }
 
 body {
@@ -25,47 +45,4 @@ body {
   color: var(--foreground);
   font-family: var(--font-sans);
   line-height: 1.6;
-}
-
-/* Stable token utilities (Tailwind-safe, always works) */
-@layer utilities {
-  .bg-surface {
-    background-color: var(--surface);
-  }
-
-  .bg-surface-2 {
-    background-color: var(--surface-2);
-  }
-
-  .bg-brand-accent {
-    background-color: var(--brand-accent);
-  }
-
-  .text-foreground {
-    color: var(--foreground);
-  }
-
-  .text-muted {
-    color: var(--muted);
-  }
-
-  .text-brand-accent {
-    color: var(--brand-accent);
-  }
-
-  .border-border {
-    border-color: var(--border);
-  }
-
-  .border-brand-accent {
-    border-color: var(--brand-accent);
-  }
-
-  .hover\:bg-brand-accent:hover {
-    background-color: var(--brand-accent);
-  }
-
-  .hover\:text-white:hover {
-    color: #fff;
-  }
 }

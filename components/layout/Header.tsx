@@ -36,6 +36,12 @@ export function Header() {
         setMobileOpen(false);
     }, [pathname]);
 
+    useEffect(() => {
+        document.body.style.overflow = mobileOpen ? "hidden" : "";
+        return () => { document.body.style.overflow = ""; };
+    }, [mobileOpen]);
+    
+
     const headerClass = useMemo(() => {
         // Top of page: transparent over hero, white text
         // On scroll: anthracite surface + subtle border
@@ -73,8 +79,8 @@ export function Header() {
                                     className={[
                                         "inline-block text-sm font-semibold transition-all duration-200 origin-center will-change-transform",
                                         scrolled ? "text-foreground/90" : "text-white/90",
-                                        "hover:text-[var(--brand-accent)] hover:scale-110",
-                                        active ? "text-[var(--brand-accent)]" : "",
+                                        "hover:text-brand-accent hover:scale-110",
+                                        active ? "text-brand-accent" : "",
                                     ].join(" ")}
                                 >
                                     {item.label}
@@ -110,47 +116,7 @@ export function Header() {
                 </div>
 
                 {/* Mobile menu */}
-                {mobileOpen && (
-                    <div className="md:hidden absolute left-0 right-0 top-16 z-50 px-4">
-                        <div className="rounded-2xl border border-border bg-surface-2 p-4 shadow-xl">
-                            <div className="flex flex-col gap-2">
-                                {NAV.map((item) => {
-                                    const active = isActive(pathname, item.href);
-                                    return (
-                                        <Link
-                                            key={item.href}
-                                            href={item.href}
-                                            className={[
-                                                "rounded-lg px-3 py-2 text-sm font-semibold",
-                                                active ? "text-[var(--brand-accent)]" : "text-foreground",
-                                                "hover:bg-surface",
-                                            ].join(" ")}
-                                        >
-                                            {item.label}
-                                        </Link>
-                                    );
-                                })}
-
-                                <div className="mt-2 flex gap-2">
-                                    <a
-                                        href="tel:+4915234002234"
-                                        className="flex-1 rounded-lg border border-border bg-surface px-3 py-2 text-sm font-semibold text-foreground text-center hover:opacity-90"
-                                    >
-                                        Anrufen
-                                    </a>
-                                    <a
-                                        href="https://wa.me/4915234002234"
-                                        target="_blank"
-                                        rel="noreferrer"
-                                        className="flex-1 rounded-lg bg-brand-accent px-3 py-2 text-sm font-semibold text-white text-center hover:opacity-90"
-                                    >
-                                        WhatsApp
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                )}
+                
             </div>
         </header>
     );
