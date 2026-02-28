@@ -6,7 +6,7 @@ type ButtonProps = {
   children: React.ReactNode;
   href?: string;
   onClick?: () => void;
-  variant?: "primary" | "outline";
+  variant?: "primary" | "outline" | "secondary";
   className?: string;
 };
 
@@ -20,6 +20,9 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         "bg-brand-accent text-white hover:opacity-90",
       outline:
         "border-2 border-brand-accent text-foreground hover:bg-brand-accent hover:text-white",
+      secondary:
+        "border border-border bg-surface text-foreground hover:border-brand-accent hover:text-brand-accent",
+
     };
 
     const styles = cn(base, variants[variant], className);
