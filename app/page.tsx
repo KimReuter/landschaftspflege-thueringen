@@ -1,9 +1,9 @@
-import { HomeHero } from "@/components/sections/HomeHero";
+import { HomeHero } from "@/components/sections/start/HomeHero";
 import "./globals.css";
-import { ServicesSection } from "@/components/sections/ServicesSection";
-import { WhyUsSection } from "@/components/sections/WhyUsSection";
-import { StatsSection } from "@/components/sections/StatsSection";
-import { CtaBand } from "@/components/sections/CtaBand";
+import { ServicesSection } from "@/components/sections/start/ServicesSection";
+import { WhyUsSection } from "@/components/sections/start/WhyUsSection";
+import { StatsSection } from "@/components/sections/start/StatsSection";
+import { CtaBand } from "@/components/sections/start/CtaBand";
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
