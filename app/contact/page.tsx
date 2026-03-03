@@ -1,8 +1,13 @@
-export default function Page() {
+import HeroSection from "@/components/sections/contact/HeroSection";
+import ContactSection from "@/components/sections/contact/ContactSection";
+import MapSection from "@/components/sections/contact/MapSection";
+
+export default function KontaktPage() {
   return (
-    <main className="mx-auto max-w-6xl px-4 py-16">
-      <h1 className="text-3xl font-bold">Titel</h1>
-      <p className="mt-4 text-muted">Inhalt folgt.</p>
+    <main className="bg-surface min-h-screen overflow-x-hidden">
+      <HeroSection />
+      <ContactSection />
+      <MapSection />
     </main>
   );
 }
