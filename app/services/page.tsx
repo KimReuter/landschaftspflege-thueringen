@@ -2,8 +2,10 @@
 
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { H2, H3, P, Small } from "@/components/ui/Type";
 import { Button } from "@/components/ui/Button";
+import { StatsSection } from "@/components/sections/start/StatsSection";
 import {
     landschaftspflege,
     gartenbau,
@@ -11,8 +13,6 @@ import {
     sonstiges,
 } from "@/content/services";
 import type { ServiceConfig } from "@/content/services";
-
-// ─── Reveal Hook ────────────────────────────────────────────────────────────
 
 function useReveal(threshold = 0.1) {
     const ref = useRef<HTMLDivElement | null>(null);
@@ -30,7 +30,13 @@ function useReveal(threshold = 0.1) {
     return { ref, visible };
 }
 
-// ─── Service Card ────────────────────────────────────────────────────────────
+// Hier trägst du später die Bilder ein die Franz liefert
+const SERVICE_IMAGES: Record<string, string | null> = {
+    landschaftspflege: null,
+    gartenbau: null,
+    innenbereich: null,
+    sonstiges: null,
+};
 
 function ServiceCard({ service, delay }: { service: ServiceConfig; delay: number }) {
     const cardRef = useRef<HTMLAnchorElement | null>(null);
@@ -41,13 +47,14 @@ function ServiceCard({ service, delay }: { service: ServiceConfig; delay: number
         if (!el) return;
         const io = new IntersectionObserver(
             ([entry]) => { if (entry.isIntersecting) { setVisible(true); io.disconnect(); } },
-            { threshold: 0.1 }
+            { threshold: 0.08 }
         );
         io.observe(el);
         return () => io.disconnect();
     }, []);
 
     const topLeistungen = service.leistungen.slice(0, 4);
+    const imageSrc = SERVICE_IMAGES[service.slug];
 
     return (
         <Link
@@ -63,25 +70,42 @@ function ServiceCard({ service, delay }: { service: ServiceConfig; delay: number
             {/* Accent top line */}
             <div className="absolute top-0 left-0 h-[2px] w-0 bg-brand-accent transition-all duration-500 group-hover:w-full" />
 
-            <div className="flex flex-col flex-1 p-8 md:p-10">
-                {/* Number + Label */}
-                <div className="flex items-center justify-between mb-6">
-                    <span className="text-[0.65rem] font-semibold tracking-[0.22em] text-brand-accent uppercase">
-                        {service.leistungsbereichLabel}
-                    </span>
-                    <span className="text-5xl font-bold text-border leading-none select-none">
-                        {service.bigNumber}
-                    </span>
+            {/* Bild-Bereich */}
+            <div className="relative w-full aspect-[16/7] bg-surface overflow-hidden">
+                {imageSrc ? (
+                    <Image
+                        src={imageSrc}
+                        alt={service.breadcrumbLabel}
+                        fill
+                        className="object-cover transition-transform duration-700 group-hover:scale-105"
+                    />
+                ) : (
+                    <div className="absolute inset-0 flex items-center justify-center border-b border-border">
+                        <span className="text-[0.65rem] font-semibold tracking-[0.2em] text-muted/30 uppercase">
+                            Bild folgt
+                        </span>
+                    </div>
+                )}
+                {/* Nummer Overlay */}
+                <div className="absolute bottom-3 right-4 text-6xl font-bold text-white/5 leading-none select-none">
+                    {service.bigNumber}
                 </div>
+            </div>
+
+            <div className="flex flex-col flex-1 p-6 md:p-8">
+                {/* Label */}
+                <span className="text-[0.65rem] font-semibold tracking-[0.22em] text-brand-accent uppercase mb-4 block">
+                    {service.leistungsbereichLabel}
+                </span>
 
                 {/* Title */}
-                <H3 className="mb-1 text-xl transition-colors duration-300 group-hover:text-brand-accent">
+                <H3 className="mb-1 transition-colors duration-300 group-hover:text-brand-accent">
                     {service.heroTitle.replace("­", "")}
                 </H3>
-                <p className="text-brand-accent/80 text-sm italic mb-5">{service.heroEmphasis}</p>
+                <p className="text-brand-accent/70 text-sm italic mb-5">{service.heroEmphasis}</p>
 
                 {/* Leistungen Liste */}
-                <ul className="space-y-2 mb-8 flex-1">
+                <ul className="space-y-2 mb-6 flex-1">
                     {topLeistungen.map((item) => (
                         <li key={item.nummer} className="flex items-start gap-2.5">
                             <span className="mt-[0.55rem] h-px w-4 bg-brand-accent/50 flex-shrink-0" />
@@ -91,7 +115,7 @@ function ServiceCard({ service, delay }: { service: ServiceConfig; delay: number
                     {service.leistungen.length > 4 && (
                         <li className="flex items-start gap-2.5">
                             <span className="mt-[0.55rem] h-px w-4 bg-brand-accent/20 flex-shrink-0" />
-                            <Small className="text-[0.75rem] text-muted/60 italic">
+                            <Small className="text-[0.75rem] text-muted/50 italic">
                                 +{service.leistungen.length - 4} weitere Leistungen
                             </Small>
                         </li>
@@ -99,7 +123,7 @@ function ServiceCard({ service, delay }: { service: ServiceConfig; delay: number
                 </ul>
 
                 {/* CTA */}
-                <div className="flex items-center gap-2 text-brand-accent text-sm font-medium mt-auto">
+                <div className="flex items-center gap-2 text-brand-accent text-sm font-medium mt-auto pt-2 border-t border-border">
                     <span>Leistungsbereich ansehen</span>
                     <span className="transition-transform duration-300 group-hover:translate-x-1.5">→</span>
                 </div>
@@ -108,29 +132,16 @@ function ServiceCard({ service, delay }: { service: ServiceConfig; delay: number
     );
 }
 
-// ─── Trust Bar ───────────────────────────────────────────────────────────────
-
-const TRUST = [
-    { value: "15+", label: "Jahre Erfahrung" },
-    { value: "4", label: "Leistungsbereiche" },
-    { value: "1", label: "Ansprechpartner" },
-    { value: "24/7", label: "Notfallservice" },
-];
-
-// ─── Page ────────────────────────────────────────────────────────────────────
-
 const ALL_SERVICES: ServiceConfig[] = [landschaftspflege, gartenbau, innenbereich, sonstiges];
 
 export default function ServicesPage() {
     const hero = useReveal(0.05);
-    const grid = useReveal(0.05);
-    const trust = useReveal(0.1);
     const cta = useReveal(0.1);
 
     return (
         <main>
-            {/* ── Hero ── */}
-            <section className="bg-surface pt-32 pb-20 px-6 md:px-10">
+            {/* Hero */}
+            <section className="bg-surface pt-32 pb-20 px-4 md:px-10">
                 <div className="mx-auto max-w-6xl">
                     <div
                         ref={hero.ref}
@@ -161,13 +172,10 @@ export default function ServicesPage() {
                 </div>
             </section>
 
-            {/* ── Service Grid ── */}
-            <section className="bg-surface pb-8 px-6 md:px-10">
+            {/* Service Grid */}
+            <section className="bg-surface pb-0 px-4 md:px-10">
                 <div className="mx-auto max-w-6xl">
-                    <div
-                        ref={grid.ref}
-                        className="grid grid-cols-1 md:grid-cols-2 gap-px bg-border"
-                    >
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-px bg-border">
                         {ALL_SERVICES.map((s, i) => (
                             <ServiceCard key={s.slug} service={s} delay={i * 90} />
                         ))}
@@ -175,30 +183,13 @@ export default function ServicesPage() {
                 </div>
             </section>
 
-            {/* ── Trust Band ── */}
-            <section className="bg-surface-2 border-y border-border py-14 px-6 md:px-10 mt-16">
-                <div
-                    ref={trust.ref}
-                    className="mx-auto max-w-6xl grid grid-cols-2 md:grid-cols-4 gap-8"
-                    style={{
-                        opacity: trust.visible ? 1 : 0,
-                        transform: trust.visible ? "none" : "translateY(20px)",
-                        transition: "opacity 0.7s ease, transform 0.7s ease",
-                    }}
-                >
-                    {TRUST.map((item) => (
-                        <div key={item.label} className="text-center md:text-left">
-                            <div className="text-3xl font-bold text-brand-accent font-serif mb-1">
-                                {item.value}
-                            </div>
-                            <div className="text-sm text-muted">{item.label}</div>
-                        </div>
-                    ))}
-                </div>
-            </section>
+            {/* Stats mit Hochzähl-Animation (bestehende Komponente) */}
+            <div className="mt-16">
+                <StatsSection />
+            </div>
 
-            {/* ── CTA ── */}
-            <section className="bg-surface py-24 px-6 md:px-10">
+            {/* CTA */}
+            <section className="bg-surface py-24 px-4 md:px-10">
                 <div
                     ref={cta.ref}
                     className="mx-auto max-w-6xl flex flex-col md:flex-row md:items-end md:justify-between gap-8"

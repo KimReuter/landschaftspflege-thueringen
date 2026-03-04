@@ -11,23 +11,36 @@ export function ServicesDropdown({ scrolled, pathname }: { scrolled: boolean; pa
 
   return (
     <div className="relative" onMouseEnter={() => setOpen(true)} onMouseLeave={() => setOpen(false)}>
-      <button
-        type="button"
-        onFocus={() => setOpen(true)}
-        onBlur={() => setOpen(false)}
-        className={[
-          "inline-flex items-center gap-1.5 text-sm font-semibold transition-all duration-200",
-          "origin-center will-change-transform hover:scale-110",
-          scrolled ? "text-foreground/90" : "text-white/90",
-          "hover:text-brand-accent",
-          active ? "text-brand-accent" : "",
-        ].join(" ")}
-        aria-haspopup="menu"
-        aria-expanded={open}
-      >
-        Leistungen
-        <ChevronDown className={["h-4 w-4 transition-transform duration-200", open ? "rotate-180" : ""].join(" ")} />
-      </button>
+      <div className="inline-flex items-center gap-0.5">
+        <Link
+          href="/services"
+          className={[
+            "text-sm font-semibold transition-all duration-200",
+            "origin-center will-change-transform hover:scale-110",
+            scrolled ? "text-foreground/90" : "text-white/90",
+            "hover:text-brand-accent",
+            active ? "text-brand-accent" : "",
+          ].join(" ")}
+        >
+          Leistungen
+        </Link>
+        <button
+          type="button"
+          onFocus={() => setOpen(true)}
+          onBlur={() => setOpen(false)}
+          className={[
+            "inline-flex items-center transition-all duration-200 px-0.5",
+            scrolled ? "text-foreground/90" : "text-white/90",
+            "hover:text-brand-accent",
+            active ? "text-brand-accent" : "",
+          ].join(" ")}
+          aria-haspopup="menu"
+          aria-expanded={open}
+          aria-label="Leistungen Untermenü"
+        >
+          <ChevronDown className={["h-4 w-4 transition-transform duration-200", open ? "rotate-180" : ""].join(" ")} />
+        </button>
+      </div>
 
       <div
         className={[
