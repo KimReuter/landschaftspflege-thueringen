@@ -57,9 +57,8 @@ export function Header() {
                   href={item.href}
                   className={[
                     "inline-block text-sm font-semibold transition-all duration-200 origin-center will-change-transform",
-                    scrolled ? "text-foreground/90" : "text-white/90",
+                    active ? "text-brand-accent" : scrolled ? "text-foreground/90" : "text-white/90",
                     "hover:text-brand-accent hover:scale-110",
-                    active ? "text-brand-accent" : "",
                   ].join(" ")}
                 >
                   {item.label}

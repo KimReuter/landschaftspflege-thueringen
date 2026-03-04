@@ -17,9 +17,8 @@ export function ServicesDropdown({ scrolled, pathname }: { scrolled: boolean; pa
           className={[
             "text-sm font-semibold transition-all duration-200",
             "origin-center will-change-transform hover:scale-110",
-            scrolled ? "text-foreground/90" : "text-white/90",
+            active ? "text-brand-accent" : scrolled ? "text-foreground/90" : "text-white/90",
             "hover:text-brand-accent",
-            active ? "text-brand-accent" : "",
           ].join(" ")}
         >
           Leistungen

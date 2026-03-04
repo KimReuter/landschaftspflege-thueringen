@@ -8,7 +8,7 @@ import InhaberSection from "@/components/sections/about/InhaberSection";
 import WerteSection from "@/components/sections/about/WerteSection";
 import TimelineSection from "@/components/sections/about/TimelineSection";
 import BildBlock from "@/components/sections/about/Bildblock";
-import CtaSection from "@/components/sections/about/CtaSection";
+import { CtaBand } from "@/components/sections/start/CtaBand";
 
 export default function UeberUnsPage() {
   const [loaded, setLoaded] = useState(false);
@@ -47,7 +47,7 @@ export default function UeberUnsPage() {
       <WerteSection />
       <TimelineSection />
       <BildBlock />
-      <CtaSection />
+      <CtaBand label="Lernen Sie uns kennen" />
     </main>
   );
 }
