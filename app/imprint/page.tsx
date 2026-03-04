@@ -13,9 +13,10 @@ export default function ImprintPage() {
 
             <section className="mt-10 space-y-1 text-sm text-muted leading-6">
                 <p className="font-semibold text-foreground">Franz Eberitsch</p>
-                <p>[PLATZHALTER: Rechtsform, z.B. Einzelunternehmen]</p>
-                <p>Rote-Berg-Str. 21</p>
-                <p>07333 Unterwellenborn | OT Kamsdorf</p>
+                <p>Einzelunternehmen</p>
+                <p>Landschaftspflege, Gartenbau u. mehr</p>
+                <p>Rote-Berg-Straße 21</p>
+                <p>07333 Unterwellenborn</p>
                 <p>Deutschland</p>
             </section>
 
@@ -37,7 +38,8 @@ export default function ImprintPage() {
 
             <section className="mt-8 space-y-2 text-sm text-muted leading-6">
                 <h2 className="text-base font-semibold text-foreground">Steuerliche Angaben</h2>
-                <p>Steuernummer: [PLATZHALTER: Steuernummer eintragen]</p>
+                <p>Steuernummer: 165/153/49816</p>
+                <p>Umsatzsteuer-Identifikationsnummer (§ 27a UStG): DE325057870</p>
             </section>
 
             <section className="mt-8 space-y-2 text-sm text-muted leading-6">
