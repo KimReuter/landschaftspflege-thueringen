@@ -9,7 +9,7 @@ export default function TimelineSection() {
   const { ref, visible } = useReveal();
 
   return (
-    <section className="border-t border-border px-6 md:px-10 py-24 md:py-32 bg-surface-2">
+    <section className="px-6 md:px-10 py-24 md:py-32 bg-surface-2">
       <div className="mx-auto max-w-6xl">
         <div
           ref={ref}
@@ -32,11 +32,17 @@ export default function TimelineSection() {
         </div>
 
         <div className="relative">
-          <div className="absolute left-[5.5rem] md:left-[7rem] top-0 bottom-0 w-px bg-border" />
+          {/* Vertikale Linie: gradient von transparent → accent am Ende */}
+          <div className="absolute left-[5.9rem] md:left-[7.9rem] top-2 bottom-10 w-px bg-gradient-to-b from-border via-border to-brand-accent/60" />
 
-          <div className="space-y-0">
+          <div>
             {TIMELINE.map((item, i) => (
-              <TimelineItem key={item.year} item={item} delay={i * 80} />
+              <TimelineItem
+                key={item.year}
+                item={item}
+                delay={i * 80}
+                isLast={i === TIMELINE.length - 1}
+              />
             ))}
           </div>
         </div>
