@@ -10,20 +10,23 @@ function LeistungCard({ item, delay }: { item: LeistungItem; delay: number }) {
   return (
     <div
       ref={card.ref}
-      className="bg-surface-2 p-8 md:p-10"
+      className="group relative bg-surface-2 p-8 md:p-10 overflow-hidden transition-colors duration-300 hover:bg-[#1f1c17]"
       style={{
         opacity: card.visible ? 1 : 0,
         transform: card.visible ? "none" : "translateY(20px)",
         transition: `opacity 0.5s ease ${delay}ms, transform 0.5s ease ${delay}ms`,
       }}
     >
+      {/* Akzentlinie oben */}
+      <div className="absolute top-0 left-0 h-[2px] w-0 bg-brand-accent transition-all duration-500 group-hover:w-full" />
+
       <div className="flex items-start gap-6">
-        <span className="text-[0.6rem] font-semibold tracking-[0.2em] text-brand-accent/60 uppercase mt-1 flex-shrink-0 w-6">
+        <span className="text-[0.6rem] font-semibold tracking-[0.2em] text-brand-accent/60 uppercase mt-1 flex-shrink-0 w-6 transition-colors duration-300 group-hover:text-brand-accent">
           {item.nummer}
         </span>
 
         <div>
-          <H3 className="mb-3">{item.titel}</H3>
+          <H3 className="mb-3 transition-colors duration-300 group-hover:text-brand-accent">{item.titel}</H3>
           <P className="text-sm leading-relaxed">{item.text}</P>
         </div>
       </div>
