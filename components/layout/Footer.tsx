@@ -4,7 +4,7 @@ import { Button } from "../ui/Button";
 const MENU = [
     { href: "/", label: "Start" },
     { href: "/services", label: "Leistungen" },
-    { href: "/projects", label: "Referenzen" },
+    { href: "/portfolio", label: "Referenzen" },
     { href: "/about", label: "Über uns" },
     { href: "/contact", label: "Kontakt" },
 ];
