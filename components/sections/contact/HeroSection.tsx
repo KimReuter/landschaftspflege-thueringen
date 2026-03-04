@@ -8,7 +8,7 @@ export default function HeroSection() {
   useEffect(() => setLoaded(true), []);
 
   return (
-    <section className="relative pt-24 pb-16 px-6 md:px-10 border-b border-border overflow-hidden">
+    <section className="relative pt-24 pb-16 px-6 md:px-10 overflow-hidden">
       <div className="absolute left-6 md:left-10 top-0 bottom-0 w-px bg-border" />
 
       <span

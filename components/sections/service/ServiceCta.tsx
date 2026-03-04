@@ -9,7 +9,7 @@ export function ServiceCta({ config }: { config: ServiceConfig }) {
   const { ref, visible } = useReveal<HTMLDivElement>();
 
   return (
-    <section className="bg-surface border-t border-border py-24 md:py-28 px-4 md:px-10">
+    <section className="bg-surface py-24 md:py-28 px-4 md:px-10">
       <div
         ref={ref}
         className="mx-auto max-w-6xl"

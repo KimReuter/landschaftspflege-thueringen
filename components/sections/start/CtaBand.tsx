@@ -32,7 +32,7 @@ export function CtaBand() {
   const { ref, visible } = useReveal();
 
   return (
-    <section className="bg-surface py-24 md:py-32 px-6 md:px-10 border-t border-border">
+    <section className="bg-surface py-24 md:py-32 px-6 md:px-10">
       <div
         ref={ref}
         className="mx-auto max-w-4xl text-center transition-all duration-700"

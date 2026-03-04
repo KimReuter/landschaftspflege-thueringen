@@ -67,7 +67,7 @@ export default function InhaberSection() {
               </P>
             </div>
 
-            <div className="flex flex-col gap-2 border-t border-border pt-8">
+            <div className="flex flex-col gap-2 pt-8">
               <Small className="text-muted/40 text-[0.7rem] uppercase tracking-widest mb-1">
                 Direkt erreichbar
               </Small>

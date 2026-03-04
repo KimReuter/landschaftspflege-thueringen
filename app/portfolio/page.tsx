@@ -35,7 +35,7 @@ export default function PortfolioPage() {
     <main className="bg-surface min-h-screen">
 
       {/* HERO */}
-      <section className="relative pt-24 pb-16 px-6 md:px-10 border-b border-border">
+      <section className="relative pt-24 pb-16 px-6 md:px-10">
         <div className="absolute left-6 md:left-10 top-24 bottom-0 w-px bg-border" />
         <div className="mx-auto max-w-6xl">
           <div
@@ -66,7 +66,7 @@ export default function PortfolioPage() {
       </section>
 
       {/* FILTER */}
-      <section className="px-6 md:px-10 py-8 border-b border-border">
+      <section className="px-6 md:px-10 py-8">
         <div className="mx-auto max-w-6xl flex flex-wrap gap-2">
           {categories.map((cat) => (
             <button
