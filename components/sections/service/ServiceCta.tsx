@@ -12,7 +12,7 @@ export function ServiceCta({ config }: { config: ServiceConfig }) {
     <section className="bg-surface border-t border-border py-24 md:py-28 px-4 md:px-10">
       <div
         ref={ref}
-        className="mx-auto max-w-5xl"
+        className="mx-auto max-w-6xl"
         style={{
           opacity: visible ? 1 : 0,
           transform: visible ? "none" : "translateY(20px)",
