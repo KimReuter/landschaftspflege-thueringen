@@ -18,7 +18,7 @@ export default function TimelineItem({
   return (
     <div
       ref={ref}
-      className="relative flex gap-8 md:gap-14 group cursor-default"
+      className="relative flex items-start gap-8 md:gap-14 group cursor-default"
       style={{
         opacity: visible ? 1 : 0,
         transform: visible ? "none" : "translateX(-16px)",
@@ -26,7 +26,7 @@ export default function TimelineItem({
       }}
     >
       {/* Jahr */}
-      <div className="w-16 md:w-24 flex-shrink-0 text-right pt-1">
+      <div className="w-16 md:w-24 flex-shrink-0 text-right">
         <span
           className={[
             "font-[family-name:var(--font-serif-display)] text-[1.15rem] leading-none tracking-tight transition-colors duration-300",
@@ -40,7 +40,7 @@ export default function TimelineItem({
       </div>
 
       {/* Dot */}
-      <div className="relative flex-shrink-0 mt-1.5 flex flex-col items-center">
+      <div className="relative flex-shrink-0 mt-[0.2rem] flex flex-col items-center">
         <div
           className={[
             "w-3 h-3 rounded-full border-2 transition-all duration-400 z-10",
