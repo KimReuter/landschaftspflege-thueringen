@@ -13,7 +13,7 @@ export function ServicePage({ config }: { config: ServiceConfig }) {
       <div className="border-t border-border mx-6 md:mx-10" />
       <ServiceLeistungen leistungen={config.leistungen} />
       <ServiceVorteile headline={config.warumHeadline} text={config.warumText} vorteile={config.vorteile} />
-      <ServiceCta />
+      <ServiceCta config={config} />
     </main>
   );
 }

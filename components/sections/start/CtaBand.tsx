@@ -57,7 +57,7 @@ export function CtaBand() {
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           {/* Button rendert bei href automatisch ein Link */}
-          <Button variant="primary" href="/kontakt">
+          <Button variant="primary" href="/contact">
             Projekt anfragen
           </Button>
 
