@@ -45,6 +45,15 @@ export function MobileNav({ pathname }: { pathname: string }) {
                 ].join(" ")}
               >
                 <div className="mt-1 space-y-1 pl-3 border-l border-border ml-4">
+                  <Link
+                    href="/services"
+                    className={[
+                      "block rounded-xl px-4 py-2.5 text-[14px] font-semibold transition-colors",
+                      pathname === "/services" ? "text-brand-accent" : "text-foreground/80 hover:text-brand-accent hover:bg-surface",
+                    ].join(" ")}
+                  >
+                    Alle Leistungen
+                  </Link>
                   {SERVICES.map((s) => {
                     const isItemActive = pathname === s.href;
                     return (
