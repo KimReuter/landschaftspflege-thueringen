@@ -25,8 +25,22 @@ export default function ContactForm() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setState("sending");
-    await new Promise((r) => setTimeout(r, 1200));
-    setState("success");
+    try {
+      const res = await fetch("https://formspree.io/f/mgonjdyy", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify(form),
+      });
+      if (res.ok) {
+        setState("success");
+      } else {
+        setState("idle");
+        alert("Fehler beim Senden. Bitte versuche es erneut.");
+      }
+    } catch {
+      setState("idle");
+      alert("Fehler beim Senden. Bitte versuche es erneut.");
+    }
   };
 
   return (
