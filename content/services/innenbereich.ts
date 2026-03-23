@@ -45,4 +45,11 @@ export const innenbereich: ServiceConfig = {
   warumHeadline: "Innen wie außen:\nEin Betrieb.",
   warumText:
     "Kein Koordinationsaufwand zwischen verschiedenen Gewerken.\nWir übernehmen Innen- und Außenarbeiten im selben Projekt –\nein Ansprechpartner, ein Zeitplan, ein Preis.",
+
+  // Weitere Bilder hier eintragen wenn Franz sie liefert
+  gallery: [
+    "/images/services/innenbereich/trockenbau.jpg",
+    "/images/services/innenbereich/entkernung.jpg",
+    "/images/services/innenbereich/entruempelung.jpeg",
+  ],
 };

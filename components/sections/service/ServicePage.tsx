@@ -5,13 +5,16 @@ import { ServiceHero } from "./ServiceHero";
 import { ServiceLeistungen } from "./ServiceLeistungen";
 import { ServiceVorteile } from "./ServiceVorteile";
 import { ServiceCta } from "./ServiceCta";
+import { ServiceGallery } from "./ServiceGallery";
 
 export function ServicePage({ config }: { config: ServiceConfig }) {
   return (
     <main className="bg-surface min-h-screen">
       <ServiceHero config={config} />
-
       <ServiceLeistungen leistungen={config.leistungen} />
+      {config.gallery && config.gallery.length > 0 && (
+        <ServiceGallery images={config.gallery} />
+      )}
       <ServiceVorteile headline={config.warumHeadline} text={config.warumText} vorteile={config.vorteile} />
       <ServiceCta config={config} />
     </main>

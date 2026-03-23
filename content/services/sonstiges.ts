@@ -45,4 +45,14 @@ export const sonstiges: ServiceConfig = {
   warumHeadline: "Kein Job zu klein.\nKein Job zu groß.",
   warumText:
     "Egal ob Carport, Winterdienst oder Stallbau –\nwir nehmen das Projekt so ernst wie jedes andere.\nStrukturiert, direkt, zum vereinbarten Preis.",
+
+  // Weitere Bilder hier eintragen wenn Franz sie liefert
+  gallery: [
+    "/images/services/sonstiges/holzbau.jpg",
+    "/images/services/sonstiges/kanalbau.jpg",
+    "/images/services/sonstiges/brennholzverkauf.jpg",
+    "/images/services/sonstiges/dachrinnenreinigung.jpg",
+    "/images/services/sonstiges/spezialauftraege.jpg",
+    "/images/services/sonstiges/sonstige_aussenarbeiten.jpg",
+  ],
 };

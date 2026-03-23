@@ -16,4 +16,5 @@ export type ServiceConfig = {
   warumText: string;
   leistungen: LeistungItem[];
   vorteile: string[];
+  gallery?: string[]; // Bildpfade für die Fotogalerie auf der Unterseite
 };

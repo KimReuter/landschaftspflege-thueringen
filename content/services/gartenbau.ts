@@ -55,4 +55,11 @@ export const gartenbau: ServiceConfig = {
   warumHeadline: "Handwerk.\nNicht Bastelarbeit.",
   warumText:
     "Strukturierte Ausführung, verlässliche Kommunikation und ein Ergebnis,\ndas auch in zehn Jahren noch gut aussieht.",
+
+  // Weitere Bilder hier eintragen wenn Franz sie liefert
+  gallery: [
+    "/images/services/gartenbau/pflasterarbeiten.jpg",
+    "/images/services/gartenbau/parkplatzbau.jpg",
+    "/images/services/gartenbau/zaunbau.jpg",
+  ],
 };
