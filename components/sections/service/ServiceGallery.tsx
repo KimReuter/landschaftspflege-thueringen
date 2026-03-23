@@ -29,12 +29,7 @@ export function ServiceGallery({ images }: { images: string[] }) {
 
         <div className="grid grid-cols-2 md:grid-cols-3 gap-px bg-border">
           {images.map((src, i) => (
-            <div
-              key={i}
-              className={`relative overflow-hidden bg-surface-2 ${
-                i === 0 && images.length > 2 ? "col-span-2 h-72 md:h-96" : "h-56 md:h-64"
-              }`}
-            >
+            <div key={i} className="relative h-56 md:h-64 overflow-hidden bg-surface-2">
               <Image
                 src={src}
                 alt={`Referenzbild ${i + 1}`}
