@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <!-- Hintergrund -->
+  <rect width="32" height="32" rx="6" fill="#1a1a14"/>
+  <!-- Baumkrone (Dreieck oben) -->
+  <polygon points="16,4 26,18 6,18" fill="#AB561B"/>
+  <!-- Baumkrone (Dreieck Mitte, etwas breiter) -->
+  <polygon points="16,10 28,22 4,22" fill="#AB561B"/>
+  <!-- Stamm -->
+  <rect x="14" y="22" width="4" height="6" rx="1" fill="#AB561B"/>
+</svg>
