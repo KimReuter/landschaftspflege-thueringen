@@ -37,7 +37,7 @@ export function HomeHero() {
       {/* Background */}
       <div ref={bgRef} className="absolute inset-0 will-change-transform">
         <Image
-          src="/images/landschaftspflege/objektpflege.jpg"
+          src="/images/services/sonstiges/holzbau.jpg"
           alt="Garten- und Landschaftsbau in Thüringen"
           fill
           priority

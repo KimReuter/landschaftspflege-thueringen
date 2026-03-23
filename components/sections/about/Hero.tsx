@@ -76,16 +76,6 @@ export default function Hero({
         </div>
       </div>
 
-      {/* Scroll indicator */}
-      <div
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 transition-all duration-1000 delay-700"
-        style={{ opacity: loaded ? 1 : 0 }}
-      >
-        <span className="text-[0.6rem] text-white/30 uppercase tracking-[0.2em]">
-          Scroll
-        </span>
-        <div className="w-px h-10 bg-gradient-to-b from-white/30 to-transparent" />
-      </div>
     </section>
   );
 }
