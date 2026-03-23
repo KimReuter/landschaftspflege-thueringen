@@ -25,6 +25,7 @@ export const metadata: Metadata = {
   title: "Landschaftspflege Thüringen | Garten- & Landschaftsbau",
   description:
     "Zuverlässige Landschaftspflege, Gartenbau und Pflasterarbeiten in Thüringen. Beratung, Umsetzung, saubere Übergabe.",
+  icons: { icon: "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌿</text></svg>" },
 };
 
 export default function RootLayout({
