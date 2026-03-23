@@ -8,10 +8,10 @@ import type { ServiceConfig } from "@/content/services";
 
 // Bilder hier eintragen sobald Franz sie liefert
 export const SERVICE_IMAGES: Record<string, string | null> = {
-    landschaftspflege: null,
-    gartenbau: null,
-    innenbereich: null,
-    sonstiges: null,
+    landschaftspflege: "/images/services/landschaftspflege/baum_arbeiten.jpg",
+    gartenbau: "/images/services/gartenbau/pflasterarbeiten.jpg",
+    innenbereich: "/images/services/innenbereich/trockenbau.jpg",
+    sonstiges: "/images/services/sonstiges/kanalbau.jpg",
 };
 
 export function ServiceCard({ service, delay }: { service: ServiceConfig; delay: number }) {
