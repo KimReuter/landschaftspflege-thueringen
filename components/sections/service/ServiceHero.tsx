@@ -24,7 +24,7 @@ export function ServiceHero({ config }: { config: ServiceConfig }) {
           </Link>
           <span className="text-muted/30 text-[0.7rem]">/</span>
           <Link
-            href="/leistungen"
+            href="/services"
             className="text-[0.7rem] text-muted/50 hover:text-muted transition-colors uppercase tracking-widest"
           >
             Leistungen
@@ -62,7 +62,7 @@ export function ServiceHero({ config }: { config: ServiceConfig }) {
           </P>
 
           <div className="flex flex-wrap gap-4">
-            <Button variant="primary" href="/kontakt">
+            <Button variant="primary" href="/contact">
               Projekt anfragen
             </Button>
 
