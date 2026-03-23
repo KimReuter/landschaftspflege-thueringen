@@ -33,7 +33,7 @@ export default function TimelineSection() {
 
         <div className="relative">
           {/* Vertikale Linie: gradient von transparent → accent am Ende */}
-          <div className="absolute left-[5.9rem] md:left-[7.9rem] top-2 bottom-10 w-px bg-gradient-to-b from-border via-border to-brand-accent/60" />
+          <div className="absolute left-[6.375rem] md:left-[7.9rem] top-2 bottom-10 w-px bg-gradient-to-b from-border via-border to-brand-accent/60" />
 
           <div>
             {TIMELINE.map((item, i) => (
