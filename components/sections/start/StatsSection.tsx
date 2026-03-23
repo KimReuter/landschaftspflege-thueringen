@@ -109,14 +109,14 @@ export function StatsSection() {
           return (
             <div
               key={s.label}
-              className="bg-brand-primary px-8 py-10 text-center"
+              className="bg-brand-primary px-3 md:px-8 py-8 md:py-10 text-center"
             >
               <div className="font-[family-name:var(--font-serif-display)] text-[clamp(2rem,4vw,3rem)] text-white leading-none tracking-tight mb-2 tabular-nums">
                 {animated}
                 {suffix}
               </div>
 
-              <Small className="text-white/50 uppercase tracking-widest text-[0.65rem]">
+              <Small className="text-white/50 uppercase tracking-wide md:tracking-widest text-[0.6rem] md:text-[0.65rem] break-words">
                 {s.label}
               </Small>
             </div>
