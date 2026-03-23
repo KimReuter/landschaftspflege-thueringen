@@ -105,7 +105,7 @@ export function HomeHero() {
             className="mt-10 flex items-center gap-4 transition-all duration-700 delay-500"
             style={{ opacity: loaded ? 1 : 0, transform: loaded ? "none" : "translateY(12px)" }}
           >
-            <Button variant="primary">Projekt starten</Button>
+            <Button variant="primary" href="/contact">Projekt starten</Button>
             <a href="#leistungen" className="text-sm text-white/60 hover:text-white/90 transition-colors underline underline-offset-4">
               Leistungen ansehen
             </a>

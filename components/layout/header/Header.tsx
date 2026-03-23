@@ -13,7 +13,6 @@ import { MobileNav } from "./MobileNav";
 export function Header() {
   const pathname = usePathname();
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [isOpen, setIsOpen] = useState(false);
 
   const closeMobile = useCallback(() => setMobileOpen(false), []);
   const { scrolled } = useHeaderBehavior(pathname, mobileOpen, closeMobile);
@@ -69,7 +68,7 @@ export function Header() {
 
           {/* Desktop CTA */}
           <div className="hidden md:block">
-            <Button variant="outline" onClick={() => setIsOpen(true)}>
+            <Button variant="outline" href="/contact">
               Projekt starten 🚀
             </Button>
           </div>
