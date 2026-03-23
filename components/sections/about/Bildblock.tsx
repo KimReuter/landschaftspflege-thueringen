@@ -16,7 +16,7 @@ export default function BildBlock() {
       <div className="grid grid-cols-2 md:grid-cols-4 grid-rows-2 gap-px bg-border">
         <div className="relative col-span-2 row-span-2 h-[420px] md:h-auto overflow-hidden bg-surface-2">
           <Image
-            src="/images/ueber-uns/team-01.jpg"
+            src="/images/ueber-uns/individuelle_pflanzungen.jpg"
             alt="Das Team bei der Arbeit"
             fill
             className="object-cover hover:scale-105 transition-transform duration-1000"
@@ -32,7 +32,7 @@ export default function BildBlock() {
 
         <div className="relative h-48 md:h-auto overflow-hidden bg-surface-2">
           <Image
-            src="/images/ueber-uns/maschinen.jpg"
+            src="/images/services/sonstiges/spezialauftraege.jpg"
             alt="Maschinen im Einsatz"
             fill
             className="object-cover hover:scale-105 transition-transform duration-1000"
@@ -42,7 +42,7 @@ export default function BildBlock() {
 
         <div className="relative h-48 md:h-auto overflow-hidden bg-surface-2">
           <Image
-            src="/images/ueber-uns/projekt-01.jpg"
+            src="/images/services/gartenbau/parkplatzbau.jpg"
             alt="Projekt in Ausführung"
             fill
             className="object-cover hover:scale-105 transition-transform duration-1000"
