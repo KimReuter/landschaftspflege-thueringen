@@ -50,8 +50,8 @@ export const sonstiges: ServiceConfig = {
     "/images/services/sonstiges/bild1.jpg",
     "/images/services/sonstiges/bild2.jpg",
     "/images/services/sonstiges/bild3.jpg",
-    "/images/services/sonstiges/bild4.webp",
     "/images/services/sonstiges/bild5.jpg",
-    "/images/services/sonstiges/bild6.webp",
+    "/images/services/sonstiges/bild8.jpg",
+    "/images/services/sonstiges/bild9.jpg",
   ],
 };
