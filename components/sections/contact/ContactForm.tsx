@@ -108,7 +108,7 @@ export default function ContactForm() {
             }
           />
 
-          <Button type="submit" disabled={state === "sending"}>
+          <Button type="submit" disabled={state === "sending"} className="w-full">
             {state === "sending" ? "Wird gesendet..." : "Anfrage senden →"}
           </Button>
         </form>
