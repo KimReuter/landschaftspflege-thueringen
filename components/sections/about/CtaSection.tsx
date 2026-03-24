@@ -38,7 +38,7 @@ export default function CtaSection() {
 
           <div className="flex flex-col gap-3 min-w-[200px]">
             {/* IMPORTANT: Dein Button unterstützt kein `as` – nur `href`. */}
-            <Button variant="primary" href="/kontakt">
+            <Button variant="primary" href="/contact">
               Gespräch starten
             </Button>
 
