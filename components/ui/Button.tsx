@@ -8,10 +8,12 @@ type ButtonProps = {
   onClick?: () => void;
   variant?: "primary" | "outline" | "secondary";
   className?: string;
+  type?: "button" | "submit" | "reset";
+  disabled?: boolean;
 };
 
 export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ children, href, onClick, variant = "primary", className }, ref) => {
+  ({ children, href, onClick, variant = "primary", className, type = "button", disabled }, ref) => {
     const base =
       "inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-semibold transition-all duration-200";
 
@@ -36,7 +38,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
     }
 
     return (
-      <button ref={ref} onClick={onClick} className={styles}>
+      <button ref={ref} onClick={onClick} type={type} disabled={disabled} className={cn(styles, disabled && "opacity-60 cursor-not-allowed")}>
         {children}
       </button>
     );

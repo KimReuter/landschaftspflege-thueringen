@@ -89,6 +89,9 @@ export default function ContactInfo() {
             </div>
           ))}
         </div>
+        <Small className="text-muted/40 mt-3 block">
+          Termine auch außerhalb der Zeiten nach Absprache möglich.
+        </Small>
       </div>
     </div>
   );

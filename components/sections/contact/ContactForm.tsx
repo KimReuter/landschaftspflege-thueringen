@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { H3, P, Small } from "@/components/ui/Type";
+import { Button } from "@/components/ui/Button";
 import { useReveal } from "@/hooks/useReveal";
 import { LEISTUNGEN } from "@/content/contact/kontakt";
 
@@ -25,8 +26,22 @@ export default function ContactForm() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setState("sending");
-    await new Promise((r) => setTimeout(r, 1200));
-    setState("success");
+    try {
+      const res = await fetch("https://formspree.io/f/mgonjdyy", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify(form),
+      });
+      if (res.ok) {
+        setState("success");
+      } else {
+        setState("idle");
+        alert("Fehler beim Senden. Bitte versuche es erneut.");
+      }
+    } catch {
+      setState("idle");
+      alert("Fehler beim Senden. Bitte versuche es erneut.");
+    }
   };
 
   return (
@@ -93,15 +108,9 @@ export default function ContactForm() {
             }
           />
 
-          <button
-            type="submit"
-            disabled={state === "sending"}
-            className="bg-brand-accent text-white px-8 py-3.5 uppercase tracking-wider font-semibold"
-          >
-            {state === "sending"
-              ? "Wird gesendet..."
-              : "Anfrage senden →"}
-          </button>
+          <Button type="submit" disabled={state === "sending"} className="w-full">
+            {state === "sending" ? "Wird gesendet..." : "Anfrage senden →"}
+          </Button>
         </form>
       )}
     </div>

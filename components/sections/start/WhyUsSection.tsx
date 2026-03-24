@@ -91,7 +91,7 @@ export function WhyUsSection() {
               Wir versprechen keine Wunderdinge –
               wir liefern saubere Ergebnisse, pünktlich und zum vereinbarten Preis.
             </P>
-            <Button variant="secondary" href="/kontakt">
+            <Button variant="secondary" href="/contact">
               Kostenloses Gespräch →
             </Button>
           </div>
