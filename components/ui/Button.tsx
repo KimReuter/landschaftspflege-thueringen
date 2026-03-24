@@ -38,7 +38,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
     }
 
     return (
-      <button ref={ref} onClick={onClick} type={type} disabled={disabled} className={cn(styles, disabled && "opacity-60 cursor-not-allowed")}>
+      <button ref={ref} onClick={onClick} type={type} disabled={disabled} className={cn(styles, disabled ? "opacity-60 cursor-not-allowed" : undefined)}>
         {children}
       </button>
     );
