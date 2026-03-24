@@ -56,10 +56,12 @@ export const gartenbau: ServiceConfig = {
   warumText:
     "Strukturierte Ausführung, verlässliche Kommunikation und ein Ergebnis,\ndas auch in zehn Jahren noch gut aussieht.",
 
-  // Weitere Bilder hier eintragen wenn Franz sie liefert
   gallery: [
-    "/images/services/gartenbau/pflasterarbeiten.jpg",
-    "/images/services/gartenbau/parkplatzbau.jpg",
-    "/images/services/gartenbau/zaunbau.jpg",
+    "/images/services/gartenbau/bild1.jpg",
+    "/images/services/gartenbau/bild2.jpg",
+    "/images/services/gartenbau/bild3.jpg",
+    "/images/services/gartenbau/bild4.jpg",
+    "/images/services/gartenbau/bild5.jpg",
+    "/images/services/gartenbau/bild6.jpg",
   ],
 };

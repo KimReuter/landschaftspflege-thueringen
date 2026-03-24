@@ -66,8 +66,12 @@ export const landschaftspflege: ServiceConfig = {
   warumText:
     "Ausgebildete Fachkräfte, moderner Maschinenpark und über 15 Jahre Erfahrung in Thüringen.\nKein Subunternehmer. Kein Versprechen ohne Deckung.",
 
-  // Weitere Bilder hier eintragen wenn Franz sie liefert
   gallery: [
-    "/images/services/landschaftspflege/baum_arbeiten.jpg",
+    "/images/services/landschaftspflege/bild1.jpg",
+    "/images/services/landschaftspflege/bild2.jpg",
+    "/images/services/landschaftspflege/bild3.jpg",
+    "/images/services/landschaftspflege/bild4.jpg",
+    "/images/services/landschaftspflege/bild5.jpg",
+    "/images/services/landschaftspflege/bild6.jpg",
   ],
 };
