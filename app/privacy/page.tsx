@@ -60,7 +60,34 @@ export default function PrivacyPage() {
             </section>
 
             <section className="mt-8 space-y-3 text-sm text-muted leading-6">
-                <h2 className="text-base font-semibold text-foreground">4. Google Maps</h2>
+                <h2 className="text-base font-semibold text-foreground">4. Kontaktformular-Dienst (Formspree)</h2>
+                <p>
+                    Für die Verarbeitung von Kontaktanfragen über das Formular auf dieser Website nutzen wir den
+                    Dienst Formspree (Formspree, Inc., 2261 Market Street #4950, San Francisco, CA 94114, USA).
+                    Wenn Sie das Kontaktformular absenden, werden Ihre eingegebenen Daten (Name, Telefon, E-Mail,
+                    Leistung, Nachricht) an Server von Formspree in den USA übertragen und dort verarbeitet.
+                </p>
+                <p>
+                    Formspree verarbeitet diese Daten ausschließlich zur Weiterleitung der Anfrage an uns und
+                    speichert sie für einen begrenzten Zeitraum. Weitere Informationen finden Sie in der
+                    Datenschutzerklärung von Formspree:{" "}
+                    <a
+                        href="https://formspree.io/legal/privacy-policy"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="hover:text-foreground transition-colors underline underline-offset-2"
+                    >
+                        https://formspree.io/legal/privacy-policy
+                    </a>
+                </p>
+                <p>
+                    Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO (Vertragsanbahnung) sowie Art. 6 Abs. 1 lit. f
+                    DSGVO (berechtigtes Interesse an der effizienten Bearbeitung von Anfragen).
+                </p>
+            </section>
+
+            <section className="mt-8 space-y-3 text-sm text-muted leading-6">
+                <h2 className="text-base font-semibold text-foreground">5. Google Maps</h2>
                 <p>
                     Diese Website nutzt den Kartendienst Google Maps der Google LLC, 1600 Amphitheatre Parkway,
                     Mountain View, CA 94043, USA (bzw. Google Ireland Limited, Gordon House, Barrow Street, Dublin 4,
@@ -72,11 +99,9 @@ export default function PrivacyPage() {
                     gespeichert. Der Anbieter dieser Seite hat keinen Einfluss auf diese Datenübertragung.
                 </p>
                 <p>
-                    Die Nutzung von Google Maps erfolgt im Interesse einer ansprechenden Darstellung unserer
-                    Online-Angebote und an einer leichten Auffindbarkeit der von uns auf der Website angegebenen Orte.
-                    Dies stellt ein berechtigtes Interesse im Sinne von Art. 6 Abs. 1 lit. f DSGVO dar. Sofern eine
-                    entsprechende Einwilligung abgefragt wurde, erfolgt die Verarbeitung ausschließlich auf Grundlage
-                    von Art. 6 Abs. 1 lit. a DSGVO.
+                    Google Maps wird auf dieser Website erst nach aktiver Bestätigung durch den Nutzer geladen
+                    (2-Klick-Lösung). Erst durch das Klicken auf „Karte laden" werden Daten an Google übertragen.
+                    Rechtsgrundlage ist Art. 6 Abs. 1 lit. a DSGVO (Einwilligung).
                 </p>
                 <p>
                     Mehr Informationen zum Umgang mit Nutzerdaten finden Sie in der Datenschutzerklärung von Google:{" "}
@@ -92,7 +117,7 @@ export default function PrivacyPage() {
             </section>
 
             <section className="mt-8 space-y-3 text-sm text-muted leading-6">
-                <h2 className="text-base font-semibold text-foreground">5. Ihre Rechte</h2>
+                <h2 className="text-base font-semibold text-foreground">6. Ihre Rechte</h2>
                 <p>Sie haben gegenüber uns folgende Rechte hinsichtlich der Sie betreffenden personenbezogenen Daten:</p>
                 <ul className="list-disc list-inside space-y-1 pl-2">
                     <li>Recht auf Auskunft (Art. 15 DSGVO)</li>
@@ -110,7 +135,7 @@ export default function PrivacyPage() {
             </section>
 
             <section className="mt-8 space-y-3 text-sm text-muted leading-6">
-                <h2 className="text-base font-semibold text-foreground">6. Datensicherheit</h2>
+                <h2 className="text-base font-semibold text-foreground">7. Datensicherheit</h2>
                 <p>
                     Diese Website nutzt aus Sicherheitsgründen und zum Schutz der Übertragung vertraulicher Inhalte
                     eine SSL- bzw. TLS-Verschlüsselung. Eine verschlüsselte Verbindung erkennen Sie daran, dass die
