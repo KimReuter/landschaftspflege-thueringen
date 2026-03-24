@@ -33,7 +33,7 @@ export function ServicesSection() {
   const { ref, visible } = useReveal();
 
   return (
-    <section id="leistungen" className="bg-surface py-14 md:py-32 px-4 md:px-10">
+    <section id="leistungen" className="bg-surface py-8 md:py-32 px-4 md:px-10">
       <div className="mx-auto max-w-6xl">
         <div
           ref={ref}
