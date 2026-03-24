@@ -138,20 +138,20 @@ export function Header() {
 
               {/* Bottom CTA (nur 2 Buttons) */}
               <div className="mt-16 px-8 pb-10">
-                <div className="flex gap-4">
-                  <a
-                    href="tel:+4915234002234"
-                    className="flex-1 rounded-full border border-border py-4 text-center text-sm font-semibold text-foreground transition hover:border-brand-accent hover:text-brand-accent"
-                  >
-                    Anrufen
-                  </a>
+                <div className="flex flex-col gap-3">
                   <a
                     href="https://wa.me/4915234002234"
                     target="_blank"
                     rel="noreferrer"
-                    className="flex-1 rounded-full bg-brand-accent py-4 text-center text-sm font-semibold text-white shadow-lg shadow-black/30 transition hover:opacity-90"
+                    className="w-full rounded-full bg-brand-accent py-4 text-center text-sm font-semibold text-white shadow-lg shadow-black/30 transition hover:opacity-90"
                   >
                     WhatsApp
+                  </a>
+                  <a
+                    href="tel:+4915234002234"
+                    className="w-full rounded-full border border-border py-4 text-center text-sm font-semibold text-foreground transition hover:border-brand-accent hover:text-brand-accent"
+                  >
+                    Anrufen
                   </a>
                 </div>
 

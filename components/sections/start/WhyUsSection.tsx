@@ -70,7 +70,7 @@ function ReasonCard({
 export function WhyUsSection() {
   const { ref, visible } = useReveal();
   return (
-    <section className="bg-surface py-8 md:py-32 px-6 md:px-10">
+    <section className="bg-surface py-8 md:py-20 px-6 md:px-10">
       <div className="mx-auto max-w-6xl">
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.6fr] gap-16 items-start">
           <div
