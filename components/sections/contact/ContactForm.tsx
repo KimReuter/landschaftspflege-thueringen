@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { H3, P, Small } from "@/components/ui/Type";
+import { Button } from "@/components/ui/Button";
 import { useReveal } from "@/hooks/useReveal";
 import { LEISTUNGEN } from "@/content/contact/kontakt";
 
@@ -107,15 +108,9 @@ export default function ContactForm() {
             }
           />
 
-          <button
-            type="submit"
-            disabled={state === "sending"}
-            className="bg-brand-accent text-white px-8 py-3.5 uppercase tracking-wider font-semibold"
-          >
-            {state === "sending"
-              ? "Wird gesendet..."
-              : "Anfrage senden →"}
-          </button>
+          <Button type="submit" disabled={state === "sending"}>
+            {state === "sending" ? "Wird gesendet..." : "Anfrage senden →"}
+          </Button>
         </form>
       )}
     </div>
