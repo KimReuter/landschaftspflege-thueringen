@@ -32,7 +32,7 @@ export default function BildBlock() {
 
         <div className="relative h-48 md:h-auto overflow-hidden bg-surface-2">
           <Image
-            src="/images/services/sonstiges/spezialauftraege.jpg"
+            src="/images/services/landschaftspflege/bild4.jpg"
             alt="Maschinen im Einsatz"
             fill
             className="object-cover hover:scale-105 transition-transform duration-1000"
@@ -42,7 +42,7 @@ export default function BildBlock() {
 
         <div className="relative h-48 md:h-auto overflow-hidden bg-surface-2">
           <Image
-            src="/images/services/gartenbau/parkplatzbau.jpg"
+            src="/images/services/landschaftspflege/bild5.jpg"
             alt="Projekt in Ausführung"
             fill
             className="object-cover hover:scale-105 transition-transform duration-1000"

@@ -15,7 +15,7 @@ export default function Hero({
       {/* Parallax image */}
       <div ref={parallaxRef} className="absolute inset-0 will-change-transform">
         <Image
-          src="/images/ueber-uns/hero.jpg"
+          src="/images/services/gartenbau/bild4.jpg"
           alt="Franz Eberitsch bei der Arbeit"
           fill
           priority
