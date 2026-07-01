@@ -70,39 +70,26 @@ export function HomeHero() {
   return (
     <section className="relative w-full min-h-[100svh] overflow-hidden -mt-16 pt-16 bg-surface">
 
-      {/* Slideshow Hintergrund */}
+      {/* Slideshow Hintergrund – alle Bilder vorladen, nur aktives sichtbar */}
       <div ref={bgRef} className="absolute inset-0 will-change-transform">
-
-        {/* Vorheriges Bild – faded aus */}
-        {prev !== null && (
+        {IMAGES.map((img, i) => (
           <Image
-            key={`prev-${prev}`}
-            src={IMAGES[prev].src}
-            alt={IMAGES[prev].alt}
+            key={img.src}
+            src={img.src}
+            alt={img.alt}
             fill
+            priority={i === 0}
             className="object-cover"
             sizes="100vw"
             style={{
-              opacity: fading ? 0 : 1,
-              transition: `opacity ${FADE_DURATION}ms ease-in-out`,
+              opacity: i === current ? 1 : 0,
+              transition: i === current || i === prev
+                ? `opacity ${FADE_DURATION}ms ease-in-out`
+                : "none",
+              zIndex: i === current ? 2 : i === prev ? 1 : 0,
             }}
           />
-        )}
-
-        {/* Aktuelles Bild – faded ein */}
-        <Image
-          key={`current-${current}`}
-          src={IMAGES[current].src}
-          alt={IMAGES[current].alt}
-          fill
-          priority={current === 0}
-          className="object-cover"
-          sizes="100vw"
-          style={{
-            opacity: fading ? 1 : 1,
-            transition: `opacity ${FADE_DURATION}ms ease-in-out`,
-          }}
-        />
+        ))}
       </div>
 
       {/* Overlay – links dunkler, rechts transparenter */}
