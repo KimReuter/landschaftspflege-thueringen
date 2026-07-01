@@ -8,9 +8,14 @@ const IMAGES = [
   { src: "/images/bannerbilder/Individuelle Pflanzungen 1 .jpg", alt: "Individuelle Pflanzungen" },
   { src: "/images/bannerbilder/Entbuschung mit Forstmulcher Raupe 2 .jpg", alt: "Entbuschung mit Forstmulcher" },
   { src: "/images/bannerbilder/Kletterarbeiten und Kronenpflege 3 .jpg", alt: "Kletterarbeiten und Kronenpflege" },
-  { src: "/images/bannerbilder/Parkplatzbau 7.jpg", alt: "Parkplatzbau" },
   { src: "/images/bannerbilder/Zaunbau 5.jpeg", alt: "Zaunbau" },
+  { src: "/images/bannerbilder/Gartenhütte 6.JPG", alt: "Gartenhütte" },
+  { src: "/images/bannerbilder/Parkplatzbau 7.jpg", alt: "Parkplatzbau" },
+  { src: "/images/bannerbilder/Kanalbau 8.JPG", alt: "Kanalbau" },
+  { src: "/images/bannerbilder/Manuelle Abrissarbeiten 9.JPG", alt: "Manuelle Abrissarbeiten" },
   { src: "/images/bannerbilder/Trockenbau 10.jpg", alt: "Trockenbau" },
+  { src: "/images/bannerbilder/Rodung bzw. Pflegearbeiten 11.JPG", alt: "Rodung und Pflegearbeiten" },
+  { src: "/images/bannerbilder/IMG_7462~photo.JPG", alt: "Landschaftspflege Thüringen" },
 ];
 
 const SLIDE_DURATION = 5000;  // 5s sichtbar
