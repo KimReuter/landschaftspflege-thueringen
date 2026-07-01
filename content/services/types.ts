@@ -4,8 +4,10 @@ export type LeistungItem = {
   text: string;
 };
 
+export type SlugType = "landschaftspflege" | "gartenbau" | "innenbereich" | "sonstiges" | "innenausbau" | "sonstige-leistungen";
+
 export type ServiceConfig = {
-  slug: "landschaftspflege" | "gartenbau" | "innenbereich" | "sonstiges" | "innenausbau" | "sonstige-leistungen";
+  slug: SlugType;
   breadcrumbLabel: string;
   leistungsbereichLabel: string; // z.B. "Leistungsbereich 02"
   heroTitle: string; // erste Zeile (z.B. "Gartenbau.")
