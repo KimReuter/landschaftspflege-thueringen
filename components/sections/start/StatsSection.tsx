@@ -27,7 +27,7 @@ function useReveal() {
   return { ref, visible };
 }
 
-const GRUENDUNGSJAHR = 2018;
+const GRUENDUNGSJAHR = 2020;
 const jahreErfahrung = new Date().getFullYear() - GRUENDUNGSJAHR;
 
 const stats = [

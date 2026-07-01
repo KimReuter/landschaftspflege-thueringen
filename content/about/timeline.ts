@@ -1,28 +1,28 @@
 export const TIMELINE = [
   {
-    year: "2018",
-    title: "Gründung",
-    text: "Franz Eberitsch gründet den Betrieb in Thüringen. Die ersten Aufträge kommen aus der Nachbarschaft – Vertrauen durch Handschlag.",
+    year: "2019",
+    title: "Eberitsch Hölzer GmbH",
+    text: "Franz Eberitsch startet mit der Eberitsch Hölzer GmbH – die ersten Schritte in der Region Thüringen.",
   },
   {
-    year: "2019",
+    year: "2020",
+    title: "Gründung der eigenen Firma",
+    text: "Gründung des eigenständigen Betriebs. Die ersten Aufträge kommen aus der Nachbarschaft – Vertrauen durch Handschlag.",
+  },
+  {
+    year: "2021",
     title: "Eigener Maschinenpark",
     text: "Erster eigener Bagger und Forstmulcher. Jetzt auch Steilhänge und große Forstflächen.",
   },
   {
-    year: "2021",
+    year: "2022",
     title: "Gewerbliche Kunden",
     text: "Erste Daueraufträge für Gewerbeparks. Ein fester Kundenstamm entsteht in ganz Thüringen.",
   },
   {
-    year: "2022",
+    year: "2023",
     title: "Leistungserweiterung",
     text: "Tiefbau, Innenausbau und weitere Bereiche kommen hinzu. Alles wirklich aus einer Hand.",
-  },
-  {
-    year: "2023",
-    title: "Zertifizierte Klettertechnik",
-    text: "Qualifizierte Baumkletterer im Team. Professionelle Seiltechnik für schwer zugängliche Standorte.",
   },
   {
     year: "2026",
