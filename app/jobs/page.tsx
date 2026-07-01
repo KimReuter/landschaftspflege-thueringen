@@ -186,13 +186,13 @@ export default function JobsPage() {
                   href="https://wa.me/4915234002234"
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex items-center justify-center rounded-full bg-brand-accent px-6 py-3 text-sm font-semibold text-white transition hover:opacity-90"
+                  className="flex-1 inline-flex items-center justify-center rounded-full bg-brand-accent px-6 py-3 text-sm font-semibold text-white transition hover:opacity-90"
                 >
                   Per WhatsApp melden
                 </a>
                 <a
                   href="tel:+4915234002234"
-                  className="inline-flex items-center justify-center rounded-full border border-border px-6 py-3 text-sm font-semibold text-foreground transition hover:border-brand-accent hover:text-brand-accent"
+                  className="flex-1 inline-flex items-center justify-center rounded-full border border-border px-6 py-3 text-sm font-semibold text-foreground transition hover:border-brand-accent hover:text-brand-accent"
                 >
                   Anrufen
                 </a>
