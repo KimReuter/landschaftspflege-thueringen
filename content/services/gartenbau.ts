@@ -48,7 +48,7 @@ export const gartenbau: ServiceConfig = {
     "Festpreisgarantie",
     "Eigener Maschinenpark",
     "Termintreue Umsetzung",
-    "Lokale Expertise seit 2018",
+    "Lokale Expertise seit 2019",
     "Kein Subunternehmer",
   ],
 

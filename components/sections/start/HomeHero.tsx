@@ -114,7 +114,7 @@ export function HomeHero() {
           >
             <span className="h-px w-8 bg-brand-accent" />
             <span className="text-[0.7rem] font-semibold uppercase tracking-[0.2em] text-brand-accent">
-              Thüringen · seit 2020
+              Thüringen · seit 2019
             </span>
           </div>
 

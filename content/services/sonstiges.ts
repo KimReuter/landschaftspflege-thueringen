@@ -62,7 +62,7 @@ export const sonstiges: ServiceConfig = {
     "Planung & Ausführung aus einer Hand",
     "Festpreisgarantie",
     "Termintreue Umsetzung",
-    "Lokale Expertise seit 2018",
+    "Lokale Expertise seit 2019",
     "Eigener Maschinenpark",
     "Kein Subunternehmer",
   ],
