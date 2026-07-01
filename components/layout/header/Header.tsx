@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useCallback, useMemo, useState } from "react";
@@ -32,7 +33,13 @@ export function Header() {
         <div className="flex h-16 items-center justify-between">
           {/* Brand */}
           <Link href="/" className="flex items-center gap-2">
-            <div className="h-9 w-9 rounded-md bg-brand-accent" aria-hidden />
+            <Image
+              src="/Landschaftspflege Eberitsch.png"
+              alt="Landschaftspflege Eberitsch Logo"
+              width={40}
+              height={40}
+              className="h-10 w-auto object-contain"
+            />
             <div className="leading-tight">
               <div className={`text-sm font-semibold ${scrolled ? "text-foreground" : "text-white"}`}>
                 Landschaftspflege Thüringen
@@ -117,7 +124,13 @@ export function Header() {
             >
               <div className="flex items-center justify-between px-5 h-16 border-b border-border">
                 <div className="flex items-center gap-2">
-                  <div className="h-9 w-9 rounded-md bg-brand-accent" aria-hidden />
+                  <Image
+                    src="/Landschaftspflege Eberitsch.png"
+                    alt="Landschaftspflege Eberitsch Logo"
+                    width={36}
+                    height={36}
+                    className="h-9 w-auto object-contain"
+                  />
                   <div className="leading-tight">
                     <div className="text-sm font-semibold text-foreground">Landschaftspflege Thüringen</div>
                     <div className="text-xs text-muted">Garten- & Landschaftsbau</div>

@@ -2,12 +2,12 @@ import type { ServiceConfig } from "./types";
 
 export const landschaftspflege: ServiceConfig = {
   slug: "landschaftspflege",
-  breadcrumbLabel: "Landschaftspflege",
+  breadcrumbLabel: "Baumarbeiten",
   leistungsbereichLabel: "Leistungsbereich 01",
-  heroTitle: "Landschafts­pflege.",
+  heroTitle: "Baumarbeiten.",
   heroEmphasis: "Professionell. Termintreu.",
   heroIntro:
-    "Von der Kronenpflege bis zur Rodung ganzer Flächen –\nwir arbeiten fachgerecht, sicher und ohne Umwege.\nEin Ansprechpartner. Festpreis. Erledigt.",
+    "Von der Kronenpflege bis zum Notfallservice –\nwir arbeiten fachgerecht, sicher und ohne Umwege.\nEin Ansprechpartner. Festpreis. Erledigt.",
   bigNumber: "01",
 
   leistungen: [
@@ -28,28 +28,23 @@ export const landschaftspflege: ServiceConfig = {
     },
     {
       nummer: "04",
-      titel: "Wurzelstockentfernung",
-      text: "Vollständige Entfernung mit Fräse oder Baggertechnik. Flächen werden danach wieder nutzbar – für Pflanzungen, Rasen oder Pflasterarbeiten.",
+      titel: "Wurzelstockentfernung mit Stopperfräse",
+      text: "Vollständige Entfernung mit Stopperfräse oder Baggertechnik. Flächen werden danach wieder nutzbar – für Pflanzungen, Rasen oder Pflasterarbeiten.",
     },
     {
       nummer: "05",
+      titel: "Häckselarbeiten",
+      text: "Professionelles Häckseln von Ästen, Schnittgut und Gehölzresten direkt vor Ort. Sauber, effizient und platzsparend entsorgt.",
+    },
+    {
+      nummer: "06",
       titel: "Obstbaumschnitt",
       text: "Erziehungs-, Erhaltungs- oder Verjüngungsschnitt – individuell abgestimmt auf Baumart, Alter und Standort für maximale Gesundheit und Ertrag.",
     },
     {
-      nummer: "06",
+      nummer: "07",
       titel: "Notfallservice bei Sturmschäden",
       text: "Schnelle Reaktion nach Unwettern. Wir beseitigen akute Gefahren durch umgestürzte Bäume oder instabile Kronenteile – zuverlässig und ohne Verzug.",
-    },
-    {
-      nummer: "07",
-      titel: "Rodung & Entbuschung",
-      text: "Flächenhafte Rodung und Entbuschung – auch an Steilhängen mit Raupe und Forstmulcher. Saubere Ergebnisse, effizient ausgeführt.",
-    },
-    {
-      nummer: "08",
-      titel: "Objektpflege",
-      text: "Regelmäßige Pflege von Außenanlagen für Firmen, Wohnanlagen und öffentliche Auftraggeber. Verlässlich, saisonal und auf Wunsch als Dauerauftrag.",
     },
   ],
 
@@ -64,7 +59,7 @@ export const landschaftspflege: ServiceConfig = {
 
   warumHeadline: "Fachbetrieb.\nNicht Hobbyist.",
   warumText:
-    "Ausgebildete Fachkräfte, moderner Maschinenpark und über 15 Jahre Erfahrung in Thüringen.\nKein Subunternehmer. Kein Versprechen ohne Deckung.",
+    "Ausgebildete Fachkräfte, moderner Maschinenpark und über 8 Jahre Erfahrung in Thüringen.\nKein Subunternehmer. Kein Versprechen ohne Deckung.",
 
   gallery: [
     "/images/services/landschaftspflege/bild1.jpg",

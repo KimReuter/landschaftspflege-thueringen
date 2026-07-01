@@ -2,12 +2,12 @@ import type { ServiceConfig } from "./types";
 
 export const sonstiges: ServiceConfig = {
   slug: "sonstiges",
-  breadcrumbLabel: "Sonstige Leistungen",
+  breadcrumbLabel: "Gartenbau",
   leistungsbereichLabel: "Leistungsbereich 04",
-  heroTitle: "Sonstige Leistungen.",
-  heroEmphasis: "Was das Projekt braucht.",
+  heroTitle: "Gartenbau.",
+  heroEmphasis: "Von der Idee bis zur Fertigstellung.",
   heroIntro:
-    "Carports, Gartenhäuser, Stallungen, Winterdienst –\nwas auch immer gebraucht wird, wird erledigt.\nSolide, direkt, zum Festpreis.",
+    "Carports, Gartenhäuser, Terrassen, Teiche –\nstrukturiert geplant und handwerklich sauber ausgeführt.\nAlles aus einer Hand, zum Festpreis.",
   bigNumber: "04",
 
   leistungen: [
@@ -18,33 +18,58 @@ export const sonstiges: ServiceConfig = {
     },
     {
       nummer: "02",
-      titel: "Gartenhäuser & Schutzhütten",
-      text: "Wir besorgen und bauen Gartenhäuser, Geräteschuppen oder individuelle Schutzhütten. Massiv, langlebig, praxisgerecht.",
+      titel: "Gartenhäuser",
+      text: "Wir besorgen und bauen Gartenhäuser und Geräteschuppen. Massiv, langlebig, praxisgerecht.",
     },
     {
       nummer: "03",
-      titel: "Stallungen & Nebengebäude",
+      titel: "Stallungen und Nebengebäude",
       text: "Einfache Stallbauten und landwirtschaftliche Nebengebäude – solide konstruiert, funktional und ohne unnötige Komplikationen.",
     },
     {
       nummer: "04",
-      titel: "Winterdienst",
-      text: "Zuverlässiger Räum- und Streudienst für Firmen und Privatkunden. Vertragsbasiert, pünktlich, mit eigenem Maschinenpark.",
+      titel: "Hochbeete",
+      text: "Bau und Anlage von Hochbeeten in verschiedenen Materialien. Ergonomisch, langlebig und auf Wunsch mit Bewässerungssystem.",
+    },
+    {
+      nummer: "05",
+      titel: "Neuanlage von Grünflächen",
+      text: "Planung und Anlage neuer Grünflächen – von der Rasenfläche bis zur naturnahen Bepflanzung. Standortgerecht und dauerhaft.",
+    },
+    {
+      nummer: "06",
+      titel: "Terrassenbau",
+      text: "Terrassen in Holz, Beton oder Naturstein. Solide Unterkonstruktion, präzise Ausführung, langfristig stabil.",
+    },
+    {
+      nummer: "07",
+      titel: "Mauerbau",
+      text: "Stütz- und Trockenmauern aus Naturstein, Beton oder Klinker. Fachgerecht gebaut, standsicher und optisch ansprechend.",
+    },
+    {
+      nummer: "08",
+      titel: "Zaunbau",
+      text: "Stabmatten-, Maschendraht- oder Senkrechtzaun – wir beraten, liefern und bauen. Passend zum Grundstück und im Festpreis.",
+    },
+    {
+      nummer: "09",
+      titel: "Teichbau",
+      text: "Planung und Bau von Gartenteichen und Wasserflächen. Fachgerecht abgedichtet, naturnah gestaltet und dauerhaft wartungsarm.",
     },
   ],
 
   vorteile: [
-    "Individuelle Lösungen",
+    "Planung & Ausführung aus einer Hand",
     "Festpreisgarantie",
-    "Eigener Maschinenpark",
     "Termintreue Umsetzung",
-    "Alles aus einer Hand",
-    "Regional seit 2010",
+    "Lokale Expertise seit 2018",
+    "Eigener Maschinenpark",
+    "Kein Subunternehmer",
   ],
 
-  warumHeadline: "Kein Job zu klein.\nKein Job zu groß.",
+  warumHeadline: "Handwerk.\nNicht Bastelarbeit.",
   warumText:
-    "Egal ob Carport, Winterdienst oder Stallbau –\nwir nehmen das Projekt so ernst wie jedes andere.\nStrukturiert, direkt, zum vereinbarten Preis.",
+    "Strukturierte Ausführung, verlässliche Kommunikation und ein Ergebnis,\ndas auch in zehn Jahren noch gut aussieht.",
 
   gallery: [
     "/images/services/sonstiges/bild1.jpg",

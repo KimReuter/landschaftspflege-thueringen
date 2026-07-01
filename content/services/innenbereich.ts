@@ -2,49 +2,64 @@ import type { ServiceConfig } from "./types";
 
 export const innenbereich: ServiceConfig = {
   slug: "innenbereich",
-  breadcrumbLabel: "Innenbereich",
+  breadcrumbLabel: "Tiefbau",
   leistungsbereichLabel: "Leistungsbereich 03",
-  heroTitle: "Innenbereich.",
-  heroEmphasis: "Abriss. Ausbau. Fertig.",
+  heroTitle: "Tiefbau.",
+  heroEmphasis: "Solide. Fachgerecht.",
   heroIntro:
-    "Trockenbau, manueller Abriss, Tiefbau und Wegebau –\nauch innen machen wir keine halben Sachen.\nStrukturiert, fachgerecht, zum Festpreis.",
+    "Von Pflasterarbeiten bis zur Leitungsverlegung –\nwir bauen sauber, nach Norm und ohne Umwege.\nEin Ansprechpartner. Festpreis. Erledigt.",
   bigNumber: "03",
 
   leistungen: [
     {
       nummer: "01",
-      titel: "Trockenbau & Innenausbau",
-      text: "Wände, Decken und Trennwände in Gipskarton- oder Metallständerbauweise. Sauber verarbeitet, termintreu und auf Wunsch mit Dämmung.",
+      titel: "Pflasterarbeiten aller Art",
+      text: "Einfahrten, Gartenwege und Stellflächen in Beton-, Naturstein- oder Klinkeroptik. Solide Unterbauung, präzise Verlegung, langfristig stabil.",
     },
     {
       nummer: "02",
-      titel: "Manueller Abriss",
-      text: "Kontrollierter Rückbau im Innen- und Außenbereich – selektiv, maschinell oder von Hand. Entsorgung auf Wunsch inklusive.",
+      titel: "Kanalbau (Abwasser)",
+      text: "Planung und Bau von Abwasserleitungen und Kanälen. Fachgerecht ausgeführt, dokumentiert und nach geltenden Normen.",
     },
     {
       nummer: "03",
-      titel: "Tiefbau & Leitungen",
-      text: "Abwasser, Strom, Trinkwasser – wir verlegen Leitungen fachgerecht, dokumentiert und nach Norm. Kein Stückwerk, alles aus einer Hand.",
+      titel: "Verlegung von Wasser und Stromleitungen",
+      text: "Fachgerechte Verlegung von Trinkwasser- und Stromleitungen im Außenbereich. Sauber dokumentiert, normgerecht und dauerhaft.",
     },
     {
       nummer: "04",
-      titel: "Parkplatz- & Wegebau",
-      text: "Planung und Bau von Stellflächen und Erschließungswegen. Tragfähiger Unterbau, professionelle Entwässerung, langlebige Oberflächen.",
+      titel: "Erdarbeiten",
+      text: "Aushub, Planierung und Verfüllung mit eigenem Maschinenpark. Effizient ausgeführt, termingerecht und ohne Folgeschäden.",
+    },
+    {
+      nummer: "05",
+      titel: "Trockenlegung von Kellern",
+      text: "Fachgerechte Abdichtung und Drainage feuchter Keller. Dauerhafte Lösung statt kurzfristiger Abhilfe.",
+    },
+    {
+      nummer: "06",
+      titel: "Setzen von Zisternen und Sammelgruben",
+      text: "Einbau von Regenwasserzisternen und Sammelgruben. Fachgerecht gesetzt, dicht und dauerhaft nutzbar.",
+    },
+    {
+      nummer: "07",
+      titel: "Wegbau",
+      text: "Bau von Erschließungswegen und Zufahrten. Tragfähiger Unterbau, professionelle Entwässerung, langlebige Oberflächen.",
     },
   ],
 
   vorteile: [
-    "Innen & Außen aus einer Hand",
+    "Eigener Maschinenpark",
     "Festpreisgarantie",
     "Termintreue Umsetzung",
     "Fachgerechte Dokumentation",
-    "Entsorgung auf Wunsch",
+    "Normgerechte Ausführung",
     "Kein Subunternehmer",
   ],
 
-  warumHeadline: "Innen wie außen:\nEin Betrieb.",
+  warumHeadline: "Tiefbau.\nOhne Kompromisse.",
   warumText:
-    "Kein Koordinationsaufwand zwischen verschiedenen Gewerken.\nWir übernehmen Innen- und Außenarbeiten im selben Projekt –\nein Ansprechpartner, ein Zeitplan, ein Preis.",
+    "Ausgebildete Fachkräfte, moderner Maschinenpark und über 8 Jahre Erfahrung in Thüringen.\nKein Subunternehmer. Kein Versprechen ohne Deckung.",
 
   gallery: [
     "/images/services/innenbereich/bild1.jpg",

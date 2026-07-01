@@ -37,7 +37,7 @@ const reasons = [
   },
   {
     icon: "◇",
-    title: "Regional seit 2010",
+    title: "Regional seit 2018",
     text: "Verwurzelt in Thüringen. Kurze Wege, lokale Kenntnis, direkte Kommunikation.",
   },
 ];

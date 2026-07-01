@@ -26,7 +26,7 @@ export default function TimelineSection() {
             </Small>
           </div>
           <H2 className="max-w-lg">
-            15 Jahre.<br />
+            8 Jahre.<br />
             Schritt für Schritt.
           </H2>
         </div>

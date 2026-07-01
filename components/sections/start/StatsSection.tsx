@@ -27,8 +27,11 @@ function useReveal() {
   return { ref, visible };
 }
 
+const GRUENDUNGSJAHR = 2018;
+const jahreErfahrung = new Date().getFullYear() - GRUENDUNGSJAHR;
+
 const stats = [
-  { value: "15+", label: "Jahre Erfahrung" },
+  { value: `${jahreErfahrung}+`, label: "Jahre Erfahrung" },
   { value: "500+", label: "Projekte abgeschlossen" },
   { value: "100%", label: "Festpreisgarantie" },
   { value: "1", label: "Ansprechpartner" },

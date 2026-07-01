@@ -29,7 +29,7 @@ export function ServiceCard({ service, delay }: { service: ServiceConfig; delay:
         return () => io.disconnect();
     }, []);
 
-    const topLeistungen = service.leistungen.slice(0, 4);
+    const topLeistungen = service.leistungen;
     const imageSrc = SERVICE_IMAGES[service.slug];
 
     return (
@@ -84,14 +84,6 @@ export function ServiceCard({ service, delay }: { service: ServiceConfig; delay:
                             <Small className="text-[0.8rem] leading-snug">{item.titel}</Small>
                         </li>
                     ))}
-                    {service.leistungen.length > 4 && (
-                        <li className="flex items-start gap-2.5">
-                            <span className="mt-[0.55rem] h-px w-4 bg-brand-accent/20 flex-shrink-0" />
-                            <Small className="text-[0.75rem] text-muted/50 italic">
-                                +{service.leistungen.length - 4} weitere Leistungen
-                            </Small>
-                        </li>
-                    )}
                 </ul>
 
                 <div className="flex items-center gap-2 text-brand-accent text-sm font-medium mt-auto pt-2 border-t border-border">

@@ -8,10 +8,12 @@ import {
   gartenbau,
   innenbereich,
   sonstiges,
+  innenausbau,
+  sonstigeleistungen,
 } from "@/content/services";
 import type { ServiceConfig } from "@/content/services";
 
-const ALL_SERVICES: ServiceConfig[] = [landschaftspflege, gartenbau, innenbereich, sonstiges];
+const ALL_SERVICES: ServiceConfig[] = [landschaftspflege, gartenbau, innenbereich, sonstiges, innenausbau, sonstigeleistungen];
 
 function useReveal() {
   const ref = useRef<HTMLDivElement | null>(null);
@@ -52,7 +54,7 @@ export function ServicesSection() {
           </div>
 
           <H2 className="max-w-xl">
-            Vier Bereiche.<br />Ein verlässlicher Partner.
+            Sechs Bereiche.<br />Ein verlässlicher Partner.
           </H2>
 
           <P className="max-w-lg">

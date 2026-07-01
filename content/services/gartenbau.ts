@@ -2,59 +2,59 @@ import type { ServiceConfig } from "./types";
 
 export const gartenbau: ServiceConfig = {
   slug: "gartenbau",
-  breadcrumbLabel: "Gartenbau",
+  breadcrumbLabel: "Grünflächenpflege",
   leistungsbereichLabel: "Leistungsbereich 02",
-  heroTitle: "Gartenbau.",
-  heroEmphasis: "Von der Idee bis zur Fertigstellung.",
+  heroTitle: "Grünflächen­pflege.",
+  heroEmphasis: "Gepflegt. Zuverlässig.",
   heroIntro:
-    "Gartengestaltung, Pflasterarbeiten, Zaunbau, Pflanzungen –\nstrukturiert geplant und handwerklich sauber ausgeführt.\nAlles aus einer Hand, zum Festpreis.",
+    "Von der Objektpflege bis zur Rasenmahd –\nwir halten Grünflächen dauerhaft in Ordnung.\nEin Ansprechpartner. Festpreis. Erledigt.",
   bigNumber: "02",
 
   leistungen: [
     {
       nummer: "01",
-      titel: "Gartengestaltung & Neuanlage",
-      text: "Von der Planung bis zur Fertigstellung: Wir gestalten Gärten, die zum Grundstück, zur Architektur und zum Nutzer passen. Strukturiert, dauerhaft, ohne Kompromisse.",
+      titel: "Objektpflege als Dauerauftrag",
+      text: "Regelmäßige Pflege von Außenanlagen für Firmen, Wohnanlagen und öffentliche Auftraggeber. Verlässlich, saisonal abgestimmt, ein fester Ansprechpartner.",
     },
     {
       nummer: "02",
-      titel: "Pflanzungen",
-      text: "Standortgerechte Auswahl und fachgerechte Pflanzung von Gehölzen, Stauden und Hecken. Abgestimmt auf Bodenbeschaffenheit, Klima und Kundenwunsch.",
+      titel: "Heckenschnitte",
+      text: "Fachgerechter Schnitt von Hecken und Formgehölzen. Sauber ausgeführt, termingerecht und mit Abtransport des Schnittguts auf Wunsch.",
     },
     {
       nummer: "03",
+      titel: "Rasenmahd",
+      text: "Regelmäßige Mahd privater und gewerblicher Rasenflächen. Zuverlässig, saisonal planbar und mit eigenem Maschinenpark.",
+    },
+    {
+      nummer: "04",
+      titel: "Rodung und Entbuschung",
+      text: "Flächenhafte Rodung und Entbuschung – auch an Steilhängen mit Raupe und Forstmulcher. Saubere Ergebnisse, effizient ausgeführt.",
+    },
+    {
+      nummer: "05",
       titel: "Rasen & Rasenpflege",
       text: "Neuanlage von Saatflächen und Rollrasen sowie laufende Pflege bestehender Rasenflächen. Sauber ausgeführt, saisonal planbar.",
     },
     {
-      nummer: "04",
-      titel: "Wege & Pflasterarbeiten",
-      text: "Einfahrten, Gartenwege und Terrassen in Beton-, Naturstein- oder Klinkeroptik. Solide Unterbauung, präzise Verlegung, langfristig stabil.",
-    },
-    {
-      nummer: "05",
-      titel: "Zaunbau & Einfriedung",
-      text: "Stabmatten-, Maschendraht- oder Senkrechtzaun – wir beraten, liefern und bauen. Passend zum Grundstück und im Festpreis.",
-    },
-    {
       nummer: "06",
-      titel: "Gartenpflege als Dauerauftrag",
-      text: "Regelmäßige Betreuung privater Gärten: Schnitt, Pflege, Unkraut, Laub. Zuverlässig, saisonal abgestimmt, ein fester Ansprechpartner.",
+      titel: "Pflanzungen",
+      text: "Standortgerechte Auswahl und fachgerechte Pflanzung von Gehölzen, Stauden und Hecken. Abgestimmt auf Bodenbeschaffenheit, Klima und Kundenwunsch.",
     },
   ],
 
   vorteile: [
-    "Planung & Ausführung aus einer Hand",
+    "Objektpflege als Dauerauftrag",
     "Festpreisgarantie",
+    "Eigener Maschinenpark",
     "Termintreue Umsetzung",
-    "Lokale Expertise seit 2010",
-    "Natürliche, standortgerechte Pflanzung",
+    "Lokale Expertise seit 2018",
     "Kein Subunternehmer",
   ],
 
-  warumHeadline: "Handwerk.\nNicht Bastelarbeit.",
+  warumHeadline: "Verlässlich.\nJede Saison.",
   warumText:
-    "Strukturierte Ausführung, verlässliche Kommunikation und ein Ergebnis,\ndas auch in zehn Jahren noch gut aussieht.",
+    "Ausgebildete Fachkräfte, moderner Maschinenpark und über 8 Jahre Erfahrung in Thüringen.\nKein Subunternehmer. Kein Versprechen ohne Deckung.",
 
   gallery: [
     "/images/services/gartenbau/bild1.jpg",

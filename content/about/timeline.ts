@@ -1,32 +1,32 @@
 export const TIMELINE = [
   {
-    year: "2010",
+    year: "2018",
     title: "Gründung",
-    text: "Franz Eberitsch gründet den Betrieb in Unterwellenborn. Die ersten Aufträge kommen aus der Nachbarschaft – Vertrauen durch Handschlag.",
+    text: "Franz Eberitsch gründet den Betrieb in Thüringen. Die ersten Aufträge kommen aus der Nachbarschaft – Vertrauen durch Handschlag.",
   },
   {
-    year: "2013",
+    year: "2019",
     title: "Eigener Maschinenpark",
     text: "Erster eigener Bagger und Forstmulcher. Jetzt auch Steilhänge und große Forstflächen.",
   },
   {
-    year: "2016",
+    year: "2021",
     title: "Gewerbliche Kunden",
     text: "Erste Daueraufträge für Gewerbeparks. Ein fester Kundenstamm entsteht in ganz Thüringen.",
   },
   {
-    year: "2019",
+    year: "2022",
     title: "Leistungserweiterung",
-    text: "Trockenbau, Tiefbau und Innenbereich kommen hinzu. Alles wirklich aus einer Hand.",
+    text: "Tiefbau, Innenausbau und weitere Bereiche kommen hinzu. Alles wirklich aus einer Hand.",
   },
   {
-    year: "2022",
+    year: "2023",
     title: "Zertifizierte Klettertechnik",
     text: "Qualifizierte Baumkletterer im Team. Professionelle Seiltechnik für schwer zugängliche Standorte.",
   },
   {
-    year: "2024",
+    year: "2026",
     title: "Heute",
-    text: "Über 500 abgeschlossene Projekte. Verlässlicher Partner für Privat, Gewerbe und Kommunen.",
+    text: "Verlässlicher Partner für Privat, Gewerbe und Kommunen in ganz Thüringen.",
   },
 ] as const;

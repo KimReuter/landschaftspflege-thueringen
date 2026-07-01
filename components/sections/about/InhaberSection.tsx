@@ -53,7 +53,7 @@ export default function InhaberSection() {
             <div className="space-y-4 mb-10">
               <P className="leading-relaxed">
                 Ich bin Franz Eberitsch – geboren und aufgewachsen in Thüringen.
-                2010 habe ich den Betrieb gegründet, weil ich eine simple Überzeugung hatte:
+                2018 habe ich den Betrieb gegründet, weil ich eine simple Überzeugung hatte:
                 Handwerk funktioniert dann, wenn derjenige der zusagt auch der ist, der ausführt.
               </P>
               <P className="leading-relaxed">
@@ -62,7 +62,7 @@ export default function InhaberSection() {
                 Das ist keine Marketing-Aussage – das ist wie wir arbeiten.
               </P>
               <P className="leading-relaxed">
-                Über 15 Jahre, hunderte Projekte, tausende Stunden draußen.
+                Über 8 Jahre, hunderte Projekte, tausende Stunden draußen.
                 Ich kenne jeden Hang in der Region und weiß, was funktioniert.
               </P>
             </div>

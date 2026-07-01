@@ -11,6 +11,8 @@ import {
     gartenbau,
     innenbereich,
     sonstiges,
+    innenausbau,
+    sonstigeleistungen,
 } from "@/content/services";
 import type { ServiceConfig } from "@/content/services";
 
@@ -53,7 +55,7 @@ function ServiceCard({ service, delay }: { service: ServiceConfig; delay: number
         return () => io.disconnect();
     }, []);
 
-    const topLeistungen = service.leistungen.slice(0, 4);
+    const topLeistungen = service.leistungen;
     const imageSrc = SERVICE_IMAGES[service.slug];
 
     return (
@@ -112,14 +114,6 @@ function ServiceCard({ service, delay }: { service: ServiceConfig; delay: number
                             <Small className="text-[0.8rem] leading-snug">{item.titel}</Small>
                         </li>
                     ))}
-                    {service.leistungen.length > 4 && (
-                        <li className="flex items-start gap-2.5">
-                            <span className="mt-[0.55rem] h-px w-4 bg-brand-accent/20 flex-shrink-0" />
-                            <Small className="text-[0.75rem] text-muted/50 italic">
-                                +{service.leistungen.length - 4} weitere Leistungen
-                            </Small>
-                        </li>
-                    )}
                 </ul>
 
                 {/* CTA */}
@@ -132,7 +126,7 @@ function ServiceCard({ service, delay }: { service: ServiceConfig; delay: number
     );
 }
 
-const ALL_SERVICES: ServiceConfig[] = [landschaftspflege, gartenbau, innenbereich, sonstiges];
+const ALL_SERVICES: ServiceConfig[] = [landschaftspflege, gartenbau, innenbereich, sonstiges, innenausbau, sonstigeleistungen];
 
 export default function ServicesPage() {
     const hero = useReveal(0.05);
@@ -159,12 +153,12 @@ export default function ServicesPage() {
                         </div>
 
                         <H2 className="max-w-2xl mb-6">
-                            Vier Bereiche.<br />
+                            Sechs Bereiche.<br />
                             Ein verlässlicher Partner.
                         </H2>
 
                         <P className="max-w-xl text-base leading-relaxed">
-                            Landschaftspflege, Gartenbau, Innenausbau und mehr –
+                            Baumarbeiten, Grünflächenpflege, Tiefbau, Gartenbau, Innenausbau und mehr –
                             strukturiert geplant, handwerklich sauber ausgeführt.
                             Kein Subunternehmer. Festpreis. Termintreu.
                         </P>

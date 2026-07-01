@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { Button } from "../ui/Button";
 
@@ -17,7 +18,13 @@ export function Footer() {
                     {/* Brand / Kurzprofil */}
                     <div>
                         <div className="flex items-center gap-3">
-                            <div className="h-10 w-10 rounded-lg bg-brand-accent" aria-hidden />
+                            <Image
+                                src="/Landschaftspflege Eberitsch.png"
+                                alt="Landschaftspflege Eberitsch Logo"
+                                width={40}
+                                height={40}
+                                className="h-10 w-auto object-contain"
+                            />
                             <div className="leading-tight">
                                 <div className="text-base font-bold text-foreground">Landschaftspflege Thüringen</div>
                                 <div className="text-sm text-muted">Garten- & Landschaftsbau</div>

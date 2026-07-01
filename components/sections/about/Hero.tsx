@@ -50,7 +50,7 @@ export default function Hero({
           <div className="flex items-center gap-3 mb-8">
             <span className="h-px w-8 bg-brand-accent" />
             <Small className="text-brand-accent uppercase tracking-[0.2em] text-[0.7rem] font-semibold">
-              Über uns · seit 2010
+              Über uns · seit 2018
             </Small>
           </div>
 
