@@ -32,9 +32,11 @@ const SERVICE_REFERENZEN: Record<SlugType, string[]> = {
 };
 
 function ReferenzCard({ referenz }: { referenz: Referenz }) {
+  const tag = referenz.tags[0];
+  const href = `/referenzen?tag=${encodeURIComponent(tag)}&projekt=${referenz.id}`;
   return (
     <Link
-      href="/referenzen"
+      href={href}
       className="group flex flex-col bg-surface-2 overflow-hidden transition-colors duration-300 hover:bg-[#1f1c17] relative"
     >
       <div className="absolute top-0 left-0 h-[2px] w-0 bg-brand-accent transition-all duration-500 group-hover:w-full" />

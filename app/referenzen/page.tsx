@@ -248,6 +248,23 @@ export default function ReferenzenPage() {
   const [lightbox, setLightbox] = useState<{ referenz: Referenz; index: number } | null>(null);
   const hero = useReveal(0.05);
 
+  // URL-Parameter auslesen: ?tag=Tiefbau&projekt=baustelle-rudolstadt
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const tag = params.get("tag") as LeistungsbereichTag | null;
+    const projektId = params.get("projekt");
+
+    if (tag && ALL_TAGS.includes(tag)) {
+      setActiveTag(tag);
+    }
+    if (projektId) {
+      const referenz = REFERENZEN.find(r => r.id === projektId);
+      if (referenz) {
+        setLightbox({ referenz, index: 0 });
+      }
+    }
+  }, []);
+
   const filtered = activeTag
     ? REFERENZEN.filter(r => r.tags.includes(activeTag))
     : REFERENZEN;
