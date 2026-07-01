@@ -34,10 +34,12 @@ function useReveal(threshold = 0.1) {
 
 // Hier trägst du später die Bilder ein die Franz liefert
 const SERVICE_IMAGES: Record<string, string | null> = {
-    landschaftspflege: "/images/services/landschaftspflege/baum_arbeiten.jpg",
-    gartenbau: "/images/services/gartenbau/pflasterarbeiten.jpg",
-    innenbereich: "/images/services/innenbereich/trockenbau.jpg",
-    sonstiges: "/images/services/sonstiges/kanalbau.jpg",
+    landschaftspflege: "/images/services/mainpicture/Hauptbild Leistungsbereich Querformat 01.jpg",
+    gartenbau: "/images/services/mainpicture/Hauptbild Leistungsbereich Querformat 02.JPG",
+    innenbereich: "/images/services/mainpicture/Hauptbild Leistungsbereich Querformat 03.JPG",
+    sonstiges: "/images/services/mainpicture/Hauptbild Leistungsbereich Querformat 04.JPG",
+    innenausbau: "/images/services/mainpicture/Hauptbild Leistungsbereich Querformat 05.jpg",
+    "sonstige-leistungen": "/images/services/mainpicture/Hauptbild Leistungsbereich Querformat 06.jpg",
 };
 
 function ServiceCard({ service, delay }: { service: ServiceConfig; delay: number }) {
