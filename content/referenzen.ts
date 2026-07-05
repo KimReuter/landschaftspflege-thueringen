@@ -136,7 +136,7 @@ export const REFERENZEN: Referenz[] = [
   },
   {
     id: "gasstation-schmiedefeld",
-    title: "Beton-Pflaster Gasstation Schmiedefeld",
+    title: "Beton Pflaster Gasstation Schmiedefeld",
     tags: ["Tiefbau"],
     subtag: "Pflasterarbeiten aller Art",
     images: PH(5),
