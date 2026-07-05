@@ -28,8 +28,8 @@ export const landschaftspflege: ServiceConfig = {
     },
     {
       nummer: "04",
-      titel: "Wurzelstockentfernung mit Stopperfräse",
-      text: "Vollständige Entfernung mit Stopperfräse oder Baggertechnik. Flächen werden danach wieder nutzbar – für Pflanzungen, Rasen oder Pflasterarbeiten.",
+      titel: "Wurzelstockentfernung mit Stuppenfräse",
+      text: "Vollständige Entfernung mit Stuppenfräse oder Baggertechnik. Flächen werden danach wieder nutzbar – für Pflanzungen, Rasen oder Pflasterarbeiten.",
     },
     {
       nummer: "05",
