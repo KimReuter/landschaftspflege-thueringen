@@ -21,29 +21,34 @@ function useReveal() {
 }
 
 const STELLE = {
-  titel: "Mitarbeiter (m/w/d) Baumpflege & Objektpflege",
+  titel: "Baumpfleger / Baumkletterer (m/w/d)",
   art: "Vollzeit · Festanstellung",
   ort: "Thüringen",
   aufgaben: [
-    "Durchführung von Baumpflegearbeiten (Kronenpflege, Fällungen, Kletterarbeiten)",
-    "Pflege und Wartung von Grün- und Außenanlagen",
-    "Objektpflege als Dauerauftrag für gewerbliche und private Kunden",
-    "Bedienung und Pflege von Maschinen und Geräten",
-    "Selbstständiges Arbeiten im Team vor Ort",
+    "Baumpflegearbeiten mit Hubarbeitsbühnen",
+    "Motorsägenschein",
+    "SKT A/B (SKT 1 & 2)",
+    "LKW-Führerschein CE",
+    "Bedienung von Häckslern und Seilwinden",
+    "Bedienung von John Deere Traktoren",
+    "Baumfällungen",
+    "Problembaumfällungen",
+    "Kronenpflege",
+    "Objektpflege",
+    "Hecken- und Gehölzschnitt",
+    "Rasenpflege und Mäharbeiten",
+    "Allgemeine Pflege von Außenanlagen",
   ],
-  profil: [
-    "Abgeschlossene Ausbildung im Garten- und Landschaftsbau oder vergleichbare Qualifikation",
-    "Erfahrung in der Baumpflege oder Bereitschaft zur Weiterbildung",
-    "Führerschein Klasse B (weitere Klassen von Vorteil)",
-    "Zuverlässigkeit, Teamfähigkeit und körperliche Belastbarkeit",
-    "Eigenverantwortliche und sorgfältige Arbeitsweise",
-  ],
+  profil: [],
   angebot: [
-    "Feste Anstellung in einem wachsenden Familienbetrieb",
-    "Faire Vergütung und pünktliche Zahlung",
-    "Moderner Maschinenpark und hochwertige Schutzausrüstung",
-    "Kurze Entscheidungswege und direkter Kontakt zur Geschäftsführung",
-    "Abwechslungsreiche Einsätze in der Region Thüringen",
+    "ab 2.400 € netto",
+    "Firmenwagen",
+    "Hochwertige Arbeitsbekleidung",
+    "Moderne Maschinen und Arbeitsgeräte",
+    "Ganzjährige Beschäftigung",
+    "Bezahlte Weiterbildungsmöglichkeiten",
+    "Unbefristeter Arbeitsvertrag",
+    "Familiäres Team",
   ],
 };
 
@@ -132,26 +137,6 @@ export default function JobsPage() {
               </ul>
             </div>
 
-            {/* Profil */}
-            <div
-              ref={profil.ref}
-              style={{
-                opacity: profil.visible ? 1 : 0,
-                transform: profil.visible ? "none" : "translateY(16px)",
-                transition: "opacity 0.6s ease 0.15s, transform 0.6s ease 0.15s",
-              }}
-              className="mb-10"
-            >
-              <H3 className="mb-5">Dein Profil</H3>
-              <ul className="space-y-3">
-                {STELLE.profil.map((item, i) => (
-                  <li key={i} className="flex items-start gap-3">
-                    <span className="mt-[0.6rem] h-px w-5 bg-brand-accent flex-shrink-0" />
-                    <P className="text-sm leading-relaxed">{item}</P>
-                  </li>
-                ))}
-              </ul>
-            </div>
 
             {/* Angebot */}
             <div
