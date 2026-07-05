@@ -26,6 +26,11 @@ export const SUBTAGS: Partial<Record<LeistungsbereichTag, string[]>> = {
     "Objektpflege & Heckenschnitte",
     "Pflanzungen",
   ],
+  Tiefbau: [
+    "Pflasterarbeiten aller Art",
+    "Abwasser / Wasser / Strom",
+    "Trockenlegung Keller",
+  ],
 };
 
 const PH = (n: number) => Array.from({ length: n }, (_, i) => `/images/referenzen/placeholder.jpg`);
@@ -95,27 +100,59 @@ export const REFERENZEN: Referenz[] = [
     ],
   },
   {
+    id: "pflasterarbeiten-rudolstadt",
+    title: "Pflasterarbeiten Rudolstadt",
+    tags: ["Tiefbau"],
+    subtag: "Pflasterarbeiten aller Art",
+    images: PH(6),
+  },
+  {
+    id: "pflasterarbeiten-koenitz",
+    title: "Pflasterarbeiten Könitz",
+    tags: ["Tiefbau"],
+    subtag: "Pflasterarbeiten aller Art",
+    images: PH(6),
+  },
+  {
+    id: "drainage-pflaster-poessneck",
+    title: "Drainage Pflaster Pößneck",
+    tags: ["Tiefbau"],
+    subtag: "Pflasterarbeiten aller Art",
+    images: PH(6),
+  },
+  {
     id: "feuerwehrzufahrt-poessneck",
     title: "Feuerwehrzufahrt Pößneck",
     tags: ["Tiefbau"],
+    subtag: "Pflasterarbeiten aller Art",
     images: PH(6),
   },
   {
-    id: "parkplatz-poessneck",
-    title: "Parkplatzbau Pößneck",
-    tags: ["Tiefbau", "Gartenbau"],
-    images: PH(6),
-  },
-  {
-    id: "baustelle-rudolstadt",
-    title: "Baustelle Rudolstadt",
+    id: "rasengitter-beton",
+    title: "Rasengitter Beton",
     tags: ["Tiefbau"],
-    images: PH(6),
+    subtag: "Pflasterarbeiten aller Art",
+    images: PH(5),
+  },
+  {
+    id: "gasstation-schmiedefeld",
+    title: "Beton-Pflaster Gasstation Schmiedefeld",
+    tags: ["Tiefbau"],
+    subtag: "Pflasterarbeiten aller Art",
+    images: PH(5),
   },
   {
     id: "granitpflaster",
-    title: "Granitpflaster",
+    title: "Granitpflaster Katzensteig",
     tags: ["Tiefbau"],
+    subtag: "Pflasterarbeiten aller Art",
+    images: PH(6),
+  },
+  {
+    id: "abwasser-wasser-strom",
+    title: "Abwasser / Wasser / Strom",
+    tags: ["Tiefbau"],
+    subtag: "Abwasser / Wasser / Strom",
     images: PH(6),
   },
   {
@@ -180,18 +217,6 @@ export const REFERENZEN: Referenz[] = [
     ],
   },
   {
-    id: "pflaster-vorwerk",
-    title: "Pflaster Vorwerk Gasstation",
-    tags: ["Tiefbau"],
-    images: PH(5),
-  },
-  {
-    id: "rasengitter",
-    title: "Rasengitter",
-    tags: ["Gartenbau"],
-    images: PH(5),
-  },
-  {
     id: "teich-seisla",
     title: "Teich Seisla",
     tags: ["Gartenbau"],
@@ -199,8 +224,9 @@ export const REFERENZEN: Referenz[] = [
   },
   {
     id: "trockenlegung-keller",
-    title: "Trockenlegung Keller Pößneck",
+    title: "Trockenlegung Keller",
     tags: ["Tiefbau"],
+    subtag: "Trockenlegung Keller",
     images: PH(6),
   },
 ];
