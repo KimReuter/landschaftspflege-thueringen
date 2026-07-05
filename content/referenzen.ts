@@ -101,7 +101,7 @@ export const REFERENZEN: Referenz[] = [
   },
   {
     id: "pflasterarbeiten-rudolstadt",
-    title: "Pflasterarbeiten Rudolstadt",
+    title: "Pflasterarbeiten Rudolstadt Mücke",
     tags: ["Tiefbau"],
     subtag: "Pflasterarbeiten aller Art",
     images: PH(6),
