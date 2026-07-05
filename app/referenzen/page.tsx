@@ -295,7 +295,7 @@ function GroupedView({ tag, onOpen }: { tag: LeistungsbereichTag; onOpen: (r: Re
                 <button
                   key={`${r.id}-${idx}`}
                   onClick={() => onOpen(r, idx)}
-                  style={{ width: `calc(100% / ${cols})`, flexShrink: 0 }}
+                  style={isLastPartial ? { flex: 1 } : { width: `calc(100% / ${cols})`, flexShrink: 0 }}
                   className="group relative overflow-hidden bg-surface-2 aspect-[4/3]"
                   aria-label={r.title}
                 >
