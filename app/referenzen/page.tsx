@@ -267,7 +267,9 @@ function GroupedView({ tag, onOpen }: { tag: LeistungsbereichTag; onOpen: (r: Re
         if (projects.length === 0) return null;
         // Alle Bilder aller Projekte dieser Gruppe flach zusammenführen
         const allImages = projects.flatMap(r => r.images.map((src, idx) => ({ src, referenz: r, idx })));
-        const cols = Math.min(allImages.length, 3);
+        // 4 Bilder → 2×2; sonst max 3 Spalten
+        const n = allImages.length;
+        const cols = n === 4 ? 2 : n === 2 ? 2 : n === 1 ? 1 : 3;
         return (
           <div key={sub}>
             <div className="flex items-center gap-4 mb-6">

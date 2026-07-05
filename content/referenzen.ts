@@ -38,7 +38,7 @@ export const REFERENZEN: Referenz[] = [
     subtag: "Kletterarbeiten & Kronenpflege",
     images: [
       "/images/referenzen/Baumpflege 01/Kletterarbeiten und Kronenpflege.jpg",
-      "/images/referenzen/Baumpflege 01/Kronenpflege .JPG",
+      "/images/referenzen/Baumpflege 01/Kronenpflege .jpg",
       "/images/referenzen/Baumpflege 01/Kronenpflege.jpg",
     ],
   },
@@ -77,8 +77,8 @@ export const REFERENZEN: Referenz[] = [
     subtag: "Rodung & Entbuschung",
     images: [
       "/images/referenzen/Baumpflege 01/Entbuschung Rodung mit Forstmulcher Raupe.jpg",
-      "/images/referenzen/Baumpflege 01/Entbuschung Rodung mit Forstraupe.JPG",
-      "/images/referenzen/Baumpflege 01/Entbuschung Rodung mit Traktor und Häcksler.JPG",
+      "/images/referenzen/Baumpflege 01/Entbuschung Rodung mit Forstraupe.jpg",
+      "/images/referenzen/Baumpflege 01/Entbuschung Rodung mit Traktor und Häcksler.jpg",
     ],
   },
   {
@@ -87,8 +87,8 @@ export const REFERENZEN: Referenz[] = [
     tags: ["Baumarbeiten"],
     subtag: "Obstbaumschnitt",
     images: [
-      "/images/referenzen/Baumpflege 01/Obstbaumschnitt/Obstbaumschnitt 1 Meura.JPG",
-      "/images/referenzen/Baumpflege 01/Obstbaumschnitt/Obstbaumschnitt 2 Meura.JPG",
+      "/images/referenzen/Baumpflege 01/Obstbaumschnitt/Obstbaumschnitt 1 Meura.jpg",
+      "/images/referenzen/Baumpflege 01/Obstbaumschnitt/Obstbaumschnitt 2 Meura.jpg",
       "/images/referenzen/Baumpflege 01/Obstbaumschnitt/Obstbaumschnitt Altbaumschnitt.jpg",
       "/images/referenzen/Baumpflege 01/Obstbaumschnitt/Obstbaumschnitt Jungbaum 1.jpg",
       "/images/referenzen/Baumpflege 01/Obstbaumschnitt/Obstbaumschnitt Jungbaum 2.jpg",
@@ -149,8 +149,8 @@ export const REFERENZEN: Referenz[] = [
     subtag: "Objektpflege & Heckenschnitte",
     images: [
       "/images/referenzen/Grünflächenpflege 02/Objektpflege.jpeg",
-      "/images/referenzen/Grünflächenpflege 02/Heckenschnitte.JPG",
-      "/images/referenzen/Grünflächenpflege 02/Objektpflege Heckenschnitte.JPG",
+      "/images/referenzen/Grünflächenpflege 02/Heckenschnitte.jpg",
+      "/images/referenzen/Grünflächenpflege 02/Objektpflege Heckenschnitte.jpg",
     ],
   },
   {
@@ -173,9 +173,9 @@ export const REFERENZEN: Referenz[] = [
     images: [
       "/images/referenzen/Grünflächenpflege 02/Pflanzung/Baumpflanzung 1.jpg",
       "/images/referenzen/Grünflächenpflege 02/Pflanzung/Baumpflanzung 2.jpg",
-      "/images/referenzen/Grünflächenpflege 02/Pflanzung/CNIA1516.JPG",
+      "/images/referenzen/Grünflächenpflege 02/Pflanzung/CNIA1516.jpg",
       "/images/referenzen/Grünflächenpflege 02/Pflanzung/Foto 12.12.25, 11 45 58.jpg",
-      "/images/referenzen/Grünflächenpflege 02/Pflanzung/QQJG0859.JPG",
+      "/images/referenzen/Grünflächenpflege 02/Pflanzung/QQJG0859.jpg",
       "/images/referenzen/Grünflächenpflege 02/Pflanzung/Strauch-Pflanzung 3.jpg",
     ],
   },
