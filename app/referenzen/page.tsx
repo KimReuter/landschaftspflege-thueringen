@@ -268,12 +268,11 @@ function GroupedView({ tag, onOpen }: { tag: LeistungsbereichTag; onOpen: (r: Re
         // Alle Bilder aller Projekte dieser Gruppe flach zusammenführen
         const allImages = projects.flatMap(r => r.images.map((src, idx) => ({ src, referenz: r, idx })));
         const n = allImages.length;
-        // auto-fit: leere Spalten in der letzten Reihe kollabieren → Bilder expandieren und füllen
-        // Sonderfall 1 und 2: feste Spalten; 4: 2×2 Grid
-        const gridCols =
-          n <= 2 ? `repeat(${n}, minmax(0, 1fr))`
-          : n === 4 ? `repeat(2, minmax(0, 1fr))`
-          : `repeat(auto-fit, minmax(calc(33.333% - 1px), 1fr))`;
+        const cols = n <= 2 ? n : n === 4 ? 2 : 3;
+        // Reihen berechnen: letzte Reihe ggf. zentriert darstellen
+        const rows: (typeof allImages)[] = [];
+        for (let i = 0; i < allImages.length; i += cols) rows.push(allImages.slice(i, i + cols));
+        const lastRowFull = rows[rows.length - 1].length === cols;
         return (
           <div key={sub}>
             <div className="flex items-center gap-4 mb-6">
@@ -283,14 +282,20 @@ function GroupedView({ tag, onOpen }: { tag: LeistungsbereichTag; onOpen: (r: Re
               </h3>
               <span className="flex-1 h-px bg-border" />
             </div>
-            <div
-              className="grid gap-px bg-border"
-              style={{ gridTemplateColumns: gridCols }}
-            >
-              {allImages.map(({ src, referenz: r, idx }, i) => (
+            <div className="flex flex-col gap-px bg-border">
+              {rows.map((row, ri) => {
+                const isLastPartial = ri === rows.length - 1 && !lastRowFull;
+                return (
+                  <div
+                    key={ri}
+                    className="flex gap-px"
+                    style={{ justifyContent: isLastPartial ? 'center' : 'flex-start' }}
+                  >
+                    {row.map(({ src, referenz: r, idx }) => (
                 <button
                   key={`${r.id}-${idx}`}
                   onClick={() => onOpen(r, idx)}
+                  style={{ width: `calc(100% / ${cols})`, flexShrink: 0 }}
                   className="group relative overflow-hidden bg-surface-2 aspect-[4/3]"
                   aria-label={r.title}
                 >
@@ -311,7 +316,10 @@ function GroupedView({ tag, onOpen }: { tag: LeistungsbereichTag; onOpen: (r: Re
                     </div>
                   )}
                 </button>
-              ))}
+                    ))}
+                  </div>
+                );
+              })}
             </div>
           </div>
         );
