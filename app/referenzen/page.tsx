@@ -3,7 +3,7 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { H2, H3, P, Small } from "@/components/ui/Type";
-import { REFERENZEN, ALL_TAGS, type LeistungsbereichTag, type Referenz } from "@/content/referenzen";
+import { REFERENZEN, ALL_TAGS, SUBTAGS, type LeistungsbereichTag, type Referenz } from "@/content/referenzen";
 
 const TAG_COLORS: Record<LeistungsbereichTag, string> = {
   Baumarbeiten: "#3d6b4f",
@@ -245,6 +245,7 @@ function ProjectCard({ referenz, delay, onOpen }: ProjectCardProps) {
 
 export default function ReferenzenPage() {
   const [activeTag, setActiveTag] = useState<LeistungsbereichTag | null>(null);
+  const [activeSubtag, setActiveSubtag] = useState<string | null>(null);
   const [lightbox, setLightbox] = useState<{ referenz: Referenz; index: number } | null>(null);
   const hero = useReveal(0.05);
 
@@ -265,9 +266,13 @@ export default function ReferenzenPage() {
     }
   }, []);
 
-  const filtered = activeTag
-    ? REFERENZEN.filter(r => r.tags.includes(activeTag))
-    : REFERENZEN;
+  const subtags = activeTag ? (SUBTAGS[activeTag] ?? []) : [];
+
+  const filtered = (() => {
+    let list = activeTag ? REFERENZEN.filter(r => r.tags.includes(activeTag)) : REFERENZEN;
+    if (activeSubtag) list = list.filter(r => r.subtag === activeSubtag);
+    return list;
+  })();
 
   return (
     <main className="bg-surface min-h-screen">
@@ -305,7 +310,7 @@ export default function ReferenzenPage() {
         <div className="mx-auto max-w-6xl">
           <div className="flex flex-wrap gap-2">
             <button
-              onClick={() => setActiveTag(null)}
+              onClick={() => { setActiveTag(null); setActiveSubtag(null); }}
               className="px-4 py-2 text-[0.68rem] font-semibold tracking-[0.15em] uppercase transition-all duration-200 border"
               style={{
                 borderColor: activeTag === null ? "var(--color-brand-accent, #4a7c59)" : "var(--color-border)",
@@ -322,7 +327,7 @@ export default function ReferenzenPage() {
               return (
                 <button
                   key={tag}
-                  onClick={() => setActiveTag(isActive ? null : tag)}
+                  onClick={() => { setActiveTag(isActive ? null : tag); setActiveSubtag(null); }}
                   className="px-4 py-2 text-[0.68rem] font-semibold tracking-[0.15em] uppercase transition-all duration-200 border"
                   style={{
                     borderColor: isActive ? TAG_COLORS[tag] : "var(--color-border)",
@@ -335,6 +340,37 @@ export default function ReferenzenPage() {
               );
             })}
           </div>
+
+          {/* Sub-Filter */}
+          {subtags.length > 0 && (
+            <div className="flex flex-wrap gap-2 mt-4 pt-4 border-t border-border/50">
+              <button
+                onClick={() => setActiveSubtag(null)}
+                className="px-3 py-1.5 text-[0.62rem] font-semibold tracking-[0.15em] uppercase transition-all duration-200 border"
+                style={{
+                  borderColor: activeSubtag === null ? "var(--color-brand-accent, #4a7c59)" : "var(--color-border)",
+                  color: activeSubtag === null ? "var(--color-brand-accent, #4a7c59)" : "var(--color-muted)",
+                  background: activeSubtag === null ? "var(--color-brand-accent, #4a7c59)10" : "transparent",
+                }}
+              >
+                Alle
+              </button>
+              {subtags.map(sub => (
+                <button
+                  key={sub}
+                  onClick={() => setActiveSubtag(activeSubtag === sub ? null : sub)}
+                  className="px-3 py-1.5 text-[0.62rem] font-semibold tracking-[0.15em] uppercase transition-all duration-200 border"
+                  style={{
+                    borderColor: activeSubtag === sub ? "var(--color-brand-accent, #4a7c59)" : "var(--color-border)",
+                    color: activeSubtag === sub ? "var(--color-brand-accent, #4a7c59)" : "var(--color-muted)",
+                    background: activeSubtag === sub ? "var(--color-brand-accent, #4a7c59)10" : "transparent",
+                  }}
+                >
+                  {sub}
+                </button>
+              ))}
+            </div>
+          )}
         </div>
       </section>
 

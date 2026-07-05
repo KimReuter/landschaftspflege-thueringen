@@ -10,16 +10,40 @@ export interface Referenz {
   id: string;
   title: string;
   tags: LeistungsbereichTag[];
+  subtag?: string;
   images: string[];
 }
+
+export const SUBTAGS: Partial<Record<LeistungsbereichTag, string[]>> = {
+  Baumarbeiten: [
+    "Kletterarbeiten & Kronenpflege",
+    "Baumfällungen, Wurzelstock & Rodung",
+    "Obstbaumschnitt",
+  ],
+};
 
 const PH = (n: number) => Array.from({ length: n }, (_, i) => `/images/referenzen/placeholder.jpg`);
 
 export const REFERENZEN: Referenz[] = [
   {
-    id: "baumpflege",
-    title: "Baumpflege & Baumfällungen",
+    id: "kletterarbeiten-kronenpflege",
+    title: "Kletterarbeiten & Kronenpflege",
     tags: ["Baumarbeiten"],
+    subtag: "Kletterarbeiten & Kronenpflege",
+    images: PH(6),
+  },
+  {
+    id: "baumfaellungen-rodung",
+    title: "Baumfällungen, Wurzelstock & Rodung",
+    tags: ["Baumarbeiten"],
+    subtag: "Baumfällungen, Wurzelstock & Rodung",
+    images: PH(6),
+  },
+  {
+    id: "obstbaumschnitt",
+    title: "Obstbaumschnitt",
+    tags: ["Baumarbeiten"],
+    subtag: "Obstbaumschnitt",
     images: PH(6),
   },
   {
