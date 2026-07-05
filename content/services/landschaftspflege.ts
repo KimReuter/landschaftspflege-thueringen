@@ -43,6 +43,11 @@ export const landschaftspflege: ServiceConfig = {
     },
     {
       nummer: "07",
+      titel: "Rodung und Entbuschung",
+      text: "Flächenhafte Rodung und Entbuschung – auch an Steilhängen mit Raupe und Forstmulcher. Saubere Ergebnisse, effizient ausgeführt.",
+    },
+    {
+      nummer: "08",
       titel: "Notfallservice bei Sturmschäden",
       text: "Schnelle Reaktion nach Unwettern. Wir beseitigen akute Gefahren durch umgestürzte Bäume oder instabile Kronenteile – zuverlässig und ohne Verzug.",
     },

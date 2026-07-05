@@ -28,16 +28,11 @@ export const gartenbau: ServiceConfig = {
     },
     {
       nummer: "04",
-      titel: "Rodung und Entbuschung",
-      text: "Flächenhafte Rodung und Entbuschung – auch an Steilhängen mit Raupe und Forstmulcher. Saubere Ergebnisse, effizient ausgeführt.",
-    },
-    {
-      nummer: "05",
       titel: "Rasenmahd & Rasenpflege",
       text: "Regelmäßige Mahd und laufende Pflege privater und gewerblicher Rasenflächen. Zuverlässig, saisonal planbar, mit eigenem Maschinenpark.",
     },
     {
-      nummer: "06",
+      nummer: "05",
       titel: "Pflanzungen",
       text: "Standortgerechte Auswahl und fachgerechte Pflanzung von Gehölzen, Stauden und Hecken. Abgestimmt auf Bodenbeschaffenheit, Klima und Kundenwunsch.",
     },
