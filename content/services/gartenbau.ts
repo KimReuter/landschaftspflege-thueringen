@@ -23,8 +23,8 @@ export const gartenbau: ServiceConfig = {
     },
     {
       nummer: "03",
-      titel: "Rasenmahd",
-      text: "Regelmäßige Mahd privater und gewerblicher Rasenflächen. Zuverlässig, saisonal planbar und mit eigenem Maschinenpark.",
+      titel: "Unkraut jäten",
+      text: "Regelmäßige Unkrautbekämpfung auf Beeten, Wegen und Außenanlagen. Sauber, gründlich und saisonal planbar.",
     },
     {
       nummer: "04",
@@ -33,8 +33,8 @@ export const gartenbau: ServiceConfig = {
     },
     {
       nummer: "05",
-      titel: "Rasen & Rasenpflege",
-      text: "Neuanlage von Saatflächen und Rollrasen sowie laufende Pflege bestehender Rasenflächen. Sauber ausgeführt, saisonal planbar.",
+      titel: "Rasenmahd & Rasenpflege",
+      text: "Regelmäßige Mahd und laufende Pflege privater und gewerblicher Rasenflächen. Zuverlässig, saisonal planbar, mit eigenem Maschinenpark.",
     },
     {
       nummer: "06",
