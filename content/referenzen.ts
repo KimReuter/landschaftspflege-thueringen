@@ -144,10 +144,14 @@ export const REFERENZEN: Referenz[] = [
   },
   {
     id: "koenitz-aussenanlage",
-    title: "Außenanlage Könitz",
-    tags: ["Grünflächenpflege", "Gartenbau"],
+    title: "Objektpflege & Heckenschnitte",
+    tags: ["Grünflächenpflege"],
     subtag: "Objektpflege & Heckenschnitte",
-    images: PH(6),
+    images: [
+      "/images/referenzen/Grünflächenpflege 02/Objektpflege.jpeg",
+      "/images/referenzen/Grünflächenpflege 02/Heckenschnitte.JPG",
+      "/images/referenzen/Grünflächenpflege 02/Objektpflege Heckenschnitte.JPG",
+    ],
   },
   {
     id: "l-steinmauer",
@@ -166,7 +170,14 @@ export const REFERENZEN: Referenz[] = [
     title: "Pflanzungen",
     tags: ["Grünflächenpflege"],
     subtag: "Pflanzungen",
-    images: PH(3),
+    images: [
+      "/images/referenzen/Grünflächenpflege 02/Pflanzung/Baumpflanzung 1.jpg",
+      "/images/referenzen/Grünflächenpflege 02/Pflanzung/Baumpflanzung 2.jpg",
+      "/images/referenzen/Grünflächenpflege 02/Pflanzung/CNIA1516.JPG",
+      "/images/referenzen/Grünflächenpflege 02/Pflanzung/Foto 12.12.25, 11 45 58.jpg",
+      "/images/referenzen/Grünflächenpflege 02/Pflanzung/QQJG0859.JPG",
+      "/images/referenzen/Grünflächenpflege 02/Pflanzung/Strauch-Pflanzung 3.jpg",
+    ],
   },
   {
     id: "pflaster-vorwerk",
