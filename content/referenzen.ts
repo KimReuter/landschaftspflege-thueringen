@@ -22,6 +22,10 @@ export const SUBTAGS: Partial<Record<LeistungsbereichTag, string[]>> = {
     "Rodung & Entbuschung",
     "Obstbaumschnitt",
   ],
+  Grünflächenpflege: [
+    "Objektpflege & Heckenschnitte",
+    "Pflanzungen",
+  ],
 };
 
 const PH = (n: number) => Array.from({ length: n }, (_, i) => `/images/referenzen/placeholder.jpg`);
@@ -142,6 +146,7 @@ export const REFERENZEN: Referenz[] = [
     id: "koenitz-aussenanlage",
     title: "Außenanlage Könitz",
     tags: ["Grünflächenpflege", "Gartenbau"],
+    subtag: "Objektpflege & Heckenschnitte",
     images: PH(6),
   },
   {
@@ -160,6 +165,7 @@ export const REFERENZEN: Referenz[] = [
     id: "pflanzung",
     title: "Pflanzungen",
     tags: ["Grünflächenpflege"],
+    subtag: "Pflanzungen",
     images: PH(3),
   },
   {
