@@ -267,9 +267,13 @@ function GroupedView({ tag, onOpen }: { tag: LeistungsbereichTag; onOpen: (r: Re
         if (projects.length === 0) return null;
         // Alle Bilder aller Projekte dieser Gruppe flach zusammenführen
         const allImages = projects.flatMap(r => r.images.map((src, idx) => ({ src, referenz: r, idx })));
-        // 4 Bilder → 2×2; sonst max 3 Spalten
         const n = allImages.length;
-        const cols = n === 4 ? 2 : n === 2 ? 2 : n === 1 ? 1 : 3;
+        // auto-fit: leere Spalten in der letzten Reihe kollabieren → Bilder expandieren und füllen
+        // Sonderfall 1 und 2: feste Spalten; 4: 2×2 Grid
+        const gridCols =
+          n <= 2 ? `repeat(${n}, minmax(0, 1fr))`
+          : n === 4 ? `repeat(2, minmax(0, 1fr))`
+          : `repeat(auto-fit, minmax(calc(33.333% - 1px), 1fr))`;
         return (
           <div key={sub}>
             <div className="flex items-center gap-4 mb-6">
@@ -281,7 +285,7 @@ function GroupedView({ tag, onOpen }: { tag: LeistungsbereichTag; onOpen: (r: Re
             </div>
             <div
               className="grid gap-px bg-border"
-              style={{ gridTemplateColumns: `repeat(${cols}, minmax(0, 1fr))` }}
+              style={{ gridTemplateColumns: gridCols }}
             >
               {allImages.map(({ src, referenz: r, idx }, i) => (
                 <button
