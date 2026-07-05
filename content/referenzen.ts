@@ -17,7 +17,9 @@ export interface Referenz {
 export const SUBTAGS: Partial<Record<LeistungsbereichTag, string[]>> = {
   Baumarbeiten: [
     "Kletterarbeiten & Kronenpflege",
-    "Baumfällungen, Wurzelstock & Rodung",
+    "Baumfällungen",
+    "Wurzelstockentfernung mit Stuppenfräse",
+    "Rodung & Entbuschung",
     "Obstbaumschnitt",
   ],
 };
@@ -30,21 +32,35 @@ export const REFERENZEN: Referenz[] = [
     title: "Kletterarbeiten & Kronenpflege",
     tags: ["Baumarbeiten"],
     subtag: "Kletterarbeiten & Kronenpflege",
+    images: PH(3),
+  },
+  {
+    id: "baumfaellungen",
+    title: "Baumfällungen",
+    tags: ["Baumarbeiten"],
+    subtag: "Baumfällungen",
     images: PH(6),
   },
   {
-    id: "baumfaellungen-rodung",
-    title: "Baumfällungen, Wurzelstock & Rodung",
+    id: "wurzelstockentfernung",
+    title: "Wurzelstockentfernung mit Stuppenfräse",
     tags: ["Baumarbeiten"],
-    subtag: "Baumfällungen, Wurzelstock & Rodung",
-    images: PH(6),
+    subtag: "Wurzelstockentfernung mit Stuppenfräse",
+    images: PH(1),
+  },
+  {
+    id: "rodung-entbuschung",
+    title: "Rodung & Entbuschung",
+    tags: ["Baumarbeiten"],
+    subtag: "Rodung & Entbuschung",
+    images: PH(2),
   },
   {
     id: "obstbaumschnitt",
     title: "Obstbaumschnitt",
     tags: ["Baumarbeiten"],
     subtag: "Obstbaumschnitt",
-    images: PH(6),
+    images: PH(5),
   },
   {
     id: "feuerwehrzufahrt-poessneck",

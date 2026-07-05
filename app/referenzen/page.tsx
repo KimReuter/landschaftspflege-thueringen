@@ -243,36 +243,103 @@ function ProjectCard({ referenz, delay, onOpen }: ProjectCardProps) {
   );
 }
 
+function GroupedView({ tag, onOpen }: { tag: LeistungsbereichTag; onOpen: (r: Referenz, i: number) => void }) {
+  const subtags = SUBTAGS[tag] ?? [];
+  const taggedProjects = REFERENZEN.filter(r => r.tags.includes(tag));
+
+  // Projects without subtag (ungrouped)
+  const ungrouped = taggedProjects.filter(r => !r.subtag);
+
+  if (subtags.length === 0) {
+    return (
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-border">
+        {taggedProjects.map((r, i) => (
+          <ProjectCard key={r.id} referenz={r} delay={Math.min(i, 5) * 70} onOpen={(ref) => onOpen(ref, 0)} />
+        ))}
+      </div>
+    );
+  }
+
+  return (
+    <div className="space-y-16">
+      {subtags.map((sub, gi) => {
+        const projects = taggedProjects.filter(r => r.subtag === sub);
+        if (projects.length === 0) return null;
+        const cols = Math.min(projects.length, 3);
+        return (
+          <div key={sub}>
+            <div className="flex items-center gap-4 mb-6">
+              <span className="h-px w-6 bg-brand-accent flex-shrink-0" />
+              <h3 className="text-sm font-semibold tracking-[0.12em] uppercase text-foreground/70">
+                {sub}
+              </h3>
+              <span className="flex-1 h-px bg-border" />
+            </div>
+            <div
+              className="grid gap-px bg-border"
+              style={{ gridTemplateColumns: `repeat(${cols}, minmax(0, 1fr))` }}
+            >
+              {projects.map((r, i) => (
+                <button
+                  key={r.id}
+                  onClick={() => onOpen(r, i)}
+                  className="group relative overflow-hidden bg-surface-2 aspect-[4/3]"
+                  aria-label={r.title}
+                >
+                  <div className="absolute top-0 left-0 h-[2px] w-0 bg-brand-accent transition-all duration-500 group-hover:w-full z-10" />
+                  {r.images[0] && (
+                    <Image
+                      src={r.images[0]}
+                      alt={r.title}
+                      fill
+                      className="object-cover transition-transform duration-700 group-hover:scale-105"
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    />
+                  )}
+                  <div className="absolute inset-0 bg-surface/0 group-hover:bg-surface/20 transition-colors duration-500" />
+                  {r.images.length > 1 && (
+                    <div className="absolute bottom-2 right-3 text-[0.6rem] font-semibold text-white/60 bg-surface/70 px-2 py-0.5">
+                      {r.images.length} Fotos
+                    </div>
+                  )}
+                </button>
+              ))}
+            </div>
+          </div>
+        );
+      })}
+      {ungrouped.length > 0 && (
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-border">
+          {ungrouped.map((r, i) => (
+            <ProjectCard key={r.id} referenz={r} delay={Math.min(i, 5) * 70} onOpen={(ref) => onOpen(ref, 0)} />
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
+
 export default function ReferenzenPage() {
   const [activeTag, setActiveTag] = useState<LeistungsbereichTag | null>(null);
-  const [activeSubtag, setActiveSubtag] = useState<string | null>(null);
   const [lightbox, setLightbox] = useState<{ referenz: Referenz; index: number } | null>(null);
   const hero = useReveal(0.05);
 
-  // URL-Parameter auslesen: ?tag=Tiefbau&projekt=baustelle-rudolstadt
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
     const tag = params.get("tag") as LeistungsbereichTag | null;
     const projektId = params.get("projekt");
-
-    if (tag && ALL_TAGS.includes(tag)) {
-      setActiveTag(tag);
-    }
+    if (tag && ALL_TAGS.includes(tag)) setActiveTag(tag);
     if (projektId) {
       const referenz = REFERENZEN.find(r => r.id === projektId);
-      if (referenz) {
-        setLightbox({ referenz, index: 0 });
-      }
+      if (referenz) setLightbox({ referenz, index: 0 });
     }
   }, []);
 
-  const subtags = activeTag ? (SUBTAGS[activeTag] ?? []) : [];
+  const flatFiltered = activeTag
+    ? REFERENZEN.filter(r => r.tags.includes(activeTag))
+    : REFERENZEN;
 
-  const filtered = (() => {
-    let list = activeTag ? REFERENZEN.filter(r => r.tags.includes(activeTag)) : REFERENZEN;
-    if (activeSubtag) list = list.filter(r => r.subtag === activeSubtag);
-    return list;
-  })();
+  const isGrouped = activeTag !== null && (SUBTAGS[activeTag]?.length ?? 0) > 0;
 
   return (
     <main className="bg-surface min-h-screen">
@@ -310,7 +377,7 @@ export default function ReferenzenPage() {
         <div className="mx-auto max-w-6xl">
           <div className="flex flex-wrap gap-2">
             <button
-              onClick={() => { setActiveTag(null); setActiveSubtag(null); }}
+              onClick={() => setActiveTag(null)}
               className="px-4 py-2 text-[0.68rem] font-semibold tracking-[0.15em] uppercase transition-all duration-200 border"
               style={{
                 borderColor: activeTag === null ? "var(--color-brand-accent, #4a7c59)" : "var(--color-border)",
@@ -327,7 +394,7 @@ export default function ReferenzenPage() {
               return (
                 <button
                   key={tag}
-                  onClick={() => { setActiveTag(isActive ? null : tag); setActiveSubtag(null); }}
+                  onClick={() => setActiveTag(isActive ? null : tag)}
                   className="px-4 py-2 text-[0.68rem] font-semibold tracking-[0.15em] uppercase transition-all duration-200 border"
                   style={{
                     borderColor: isActive ? TAG_COLORS[tag] : "var(--color-border)",
@@ -340,53 +407,26 @@ export default function ReferenzenPage() {
               );
             })}
           </div>
-
-          {/* Sub-Filter */}
-          {subtags.length > 0 && (
-            <div className="flex flex-wrap gap-2 mt-4 pt-4 border-t border-border/50">
-              <button
-                onClick={() => setActiveSubtag(null)}
-                className="px-3 py-1.5 text-[0.62rem] font-semibold tracking-[0.15em] uppercase transition-all duration-200 border"
-                style={{
-                  borderColor: activeSubtag === null ? "var(--color-brand-accent, #4a7c59)" : "var(--color-border)",
-                  color: activeSubtag === null ? "var(--color-brand-accent, #4a7c59)" : "var(--color-muted)",
-                  background: activeSubtag === null ? "var(--color-brand-accent, #4a7c59)10" : "transparent",
-                }}
-              >
-                Alle
-              </button>
-              {subtags.map(sub => (
-                <button
-                  key={sub}
-                  onClick={() => setActiveSubtag(activeSubtag === sub ? null : sub)}
-                  className="px-3 py-1.5 text-[0.62rem] font-semibold tracking-[0.15em] uppercase transition-all duration-200 border"
-                  style={{
-                    borderColor: activeSubtag === sub ? "var(--color-brand-accent, #4a7c59)" : "var(--color-border)",
-                    color: activeSubtag === sub ? "var(--color-brand-accent, #4a7c59)" : "var(--color-muted)",
-                    background: activeSubtag === sub ? "var(--color-brand-accent, #4a7c59)10" : "transparent",
-                  }}
-                >
-                  {sub}
-                </button>
-              ))}
-            </div>
-          )}
         </div>
       </section>
 
-      {/* Grid */}
+      {/* Content */}
       <section className="px-4 md:px-10 pb-24">
         <div className="mx-auto max-w-6xl">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-border">
-            {filtered.map((r, i) => (
-              <ProjectCard
-                key={r.id}
-                referenz={r}
-                delay={Math.min(i, 5) * 70}
-                onOpen={(ref) => setLightbox({ referenz: ref, index: 0 })}
-              />
-            ))}
-          </div>
+          {isGrouped ? (
+            <GroupedView tag={activeTag!} onOpen={(r, i) => setLightbox({ referenz: r, index: i })} />
+          ) : (
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-border">
+              {flatFiltered.map((r, i) => (
+                <ProjectCard
+                  key={r.id}
+                  referenz={r}
+                  delay={Math.min(i, 5) * 70}
+                  onOpen={(ref) => setLightbox({ referenz: ref, index: 0 })}
+                />
+              ))}
+            </div>
+          )}
         </div>
       </section>
 
