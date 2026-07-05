@@ -265,7 +265,9 @@ function GroupedView({ tag, onOpen }: { tag: LeistungsbereichTag; onOpen: (r: Re
       {subtags.map((sub, gi) => {
         const projects = taggedProjects.filter(r => r.subtag === sub);
         if (projects.length === 0) return null;
-        const cols = Math.min(projects.length, 3);
+        // Alle Bilder aller Projekte dieser Gruppe flach zusammenführen
+        const allImages = projects.flatMap(r => r.images.map((src, idx) => ({ src, referenz: r, idx })));
+        const cols = Math.min(allImages.length, 3);
         return (
           <div key={sub}>
             <div className="flex items-center gap-4 mb-6">
@@ -279,17 +281,17 @@ function GroupedView({ tag, onOpen }: { tag: LeistungsbereichTag; onOpen: (r: Re
               className="grid gap-px bg-border"
               style={{ gridTemplateColumns: `repeat(${cols}, minmax(0, 1fr))` }}
             >
-              {projects.map((r, i) => (
+              {allImages.map(({ src, referenz: r, idx }, i) => (
                 <button
-                  key={r.id}
-                  onClick={() => onOpen(r, i)}
+                  key={`${r.id}-${idx}`}
+                  onClick={() => onOpen(r, idx)}
                   className="group relative overflow-hidden bg-surface-2 aspect-[4/3]"
                   aria-label={r.title}
                 >
                   <div className="absolute top-0 left-0 h-[2px] w-0 bg-brand-accent transition-all duration-500 group-hover:w-full z-10" />
-                  {r.images[0] && (
+                  {src && (
                     <Image
-                      src={r.images[0]}
+                      src={src}
                       alt={r.title}
                       fill
                       className="object-cover transition-transform duration-700 group-hover:scale-105"
@@ -297,7 +299,7 @@ function GroupedView({ tag, onOpen }: { tag: LeistungsbereichTag; onOpen: (r: Re
                     />
                   )}
                   <div className="absolute inset-0 bg-surface/0 group-hover:bg-surface/20 transition-colors duration-500" />
-                  {r.images.length > 1 && (
+                  {false && (
                     <div className="absolute bottom-2 right-3 text-[0.6rem] font-semibold text-white/60 bg-surface/70 px-2 py-0.5">
                       {r.images.length} Fotos
                     </div>
