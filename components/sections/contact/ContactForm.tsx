@@ -81,22 +81,25 @@ export default function ContactForm() {
             }
           />
 
-          <select
-            name="leistung"
-            className={inputClass}
-            onChange={(e) =>
-              setForm({ ...form, leistung: e.target.value })
-            }
-          >
-            {LEISTUNGEN.map((l) => (
-              <option
-                key={l}
-                value={l === "Bitte wählen..." ? "" : l}
-              >
-                {l}
-              </option>
-            ))}
-          </select>
+          <div className="relative">
+            <select
+              name="leistung"
+              className={`${inputClass} appearance-none pr-10 cursor-pointer`}
+              onChange={(e) =>
+                setForm({ ...form, leistung: e.target.value })
+              }
+            >
+              {LEISTUNGEN.map((l) => (
+                <option
+                  key={l}
+                  value={l === "Bitte wählen..." ? "" : l}
+                >
+                  {l}
+                </option>
+              ))}
+            </select>
+            <span className="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-muted text-xs">▼</span>
+          </div>
 
           <textarea
             name="nachricht"
