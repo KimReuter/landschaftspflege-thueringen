@@ -64,7 +64,12 @@ export function ServiceLeistungen({ leistungen }: { leistungen: LeistungItem[] }
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-border">
           {leistungen.map((l, i) => (
-            <LeistungCard key={l.nummer} item={l} delay={i * 60} />
+            <div
+              key={l.nummer}
+              className={leistungen.length % 2 === 1 && i === leistungen.length - 1 ? "md:col-span-2" : ""}
+            >
+              <LeistungCard item={l} delay={i * 60} />
+            </div>
           ))}
         </div>
       </div>
