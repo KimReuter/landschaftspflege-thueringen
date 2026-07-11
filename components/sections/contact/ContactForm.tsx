@@ -82,6 +82,16 @@ export default function ContactForm() {
             }
           />
 
+          <input
+            name="email"
+            type="email"
+            placeholder="E-Mail (optional)"
+            className={fieldClass}
+            onChange={(e) =>
+              setForm({ ...form, email: e.target.value })
+            }
+          />
+
           <div className="relative">
             <select
               name="leistung"
