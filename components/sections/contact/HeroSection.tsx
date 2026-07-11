@@ -42,9 +42,9 @@ export default function HeroSection() {
           </H1>
 
           <P className="max-w-lg leading-relaxed">
-            Kein Formular-Labyrinth. Kein Callcenter.
-            Schreiben Sie uns oder rufen Sie an –
-            Sie erreichen direkt den Inhaber.
+            Kein Formular-Chaos. Kein Callcenter.<br />
+            Sie rufen an oder schreiben – ich melde mich.<br />
+            Persönlich. Direkt. Ohne Umwege.
           </P>
         </div>
       </div>
