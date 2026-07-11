@@ -22,6 +22,7 @@ export default function ContactForm() {
 
   const inputClass =
     "w-full bg-surface border border-border px-4 py-3.5 text-sm focus:outline-none focus:border-brand-accent";
+  const fieldClass = `${inputClass} h-[50px]`;
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -65,7 +66,7 @@ export default function ContactForm() {
             name="name"
             required
             placeholder="Name"
-            className={inputClass}
+            className={fieldClass}
             onChange={(e) =>
               setForm({ ...form, name: e.target.value })
             }
@@ -75,7 +76,7 @@ export default function ContactForm() {
             name="telefon"
             required
             placeholder="Telefon"
-            className={inputClass}
+            className={fieldClass}
             onChange={(e) =>
               setForm({ ...form, telefon: e.target.value })
             }
@@ -84,7 +85,7 @@ export default function ContactForm() {
           <div className="relative">
             <select
               name="leistung"
-              className={`${inputClass} appearance-none pr-10 cursor-pointer`}
+              className={`${fieldClass} appearance-none pr-10 cursor-pointer`}
               onChange={(e) =>
                 setForm({ ...form, leistung: e.target.value })
               }
