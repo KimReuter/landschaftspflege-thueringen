@@ -137,7 +137,7 @@ export default function ServicesPage() {
     return (
         <main>
             {/* Hero */}
-            <section className="bg-surface pt-32 pb-20 px-4 md:px-10">
+            <section className="bg-surface pt-20 md:pt-32 pb-20 px-4 md:px-10">
                 <div className="mx-auto max-w-6xl">
                     <div
                         ref={hero.ref}

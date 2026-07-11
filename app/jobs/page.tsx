@@ -207,7 +207,7 @@ export default function JobsPage() {
   return (
     <main className="bg-surface min-h-screen overflow-x-hidden">
       {/* Hero */}
-      <section className="pt-36 pb-20 px-4 md:px-10 border-b border-border">
+      <section className="pt-20 md:pt-36 pb-20 px-4 md:px-10 border-b border-border">
         <div className="mx-auto max-w-6xl">
           <div
             ref={hero.ref}

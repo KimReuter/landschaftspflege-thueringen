@@ -377,7 +377,7 @@ export default function ReferenzenPage() {
   return (
     <main className="bg-surface min-h-screen">
       {/* Hero */}
-      <section className="pt-32 pb-16 px-4 md:px-10">
+      <section className="pt-20 md:pt-32 pb-16 px-4 md:px-10">
         <div className="mx-auto max-w-6xl">
           <div
             ref={hero.ref}
