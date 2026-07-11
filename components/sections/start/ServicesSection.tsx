@@ -58,7 +58,7 @@ export function ServicesSection() {
           </H2>
 
           <P className="max-w-lg">
-            Klar strukturiert, direkt ausgeführt – ohne Umwege, ohne Überraschungen.
+            Klar strukturiert, direkt ausgeführt –<br />ohne Umwege, ohne Überraschungen.
           </P>
         </div>
 

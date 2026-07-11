@@ -88,8 +88,7 @@ export function WhyUsSection() {
               Zuverlässig.<br />Direkt.<br />Vor Ort.
             </H2>
             <P className="mb-8 max-w-sm">
-              Wir versprechen keine Wunderdinge –
-              wir liefern saubere Ergebnisse, pünktlich und zum vereinbarten Preis.
+              Wir versprechen keine Wunderdinge –<br />wir liefern saubere Ergebnisse, pünktlich und zum vereinbarten Preis.
             </P>
             <Button variant="secondary" href="/contact">
               Kostenloses Gespräch →
