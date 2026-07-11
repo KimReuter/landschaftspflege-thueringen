@@ -206,10 +206,10 @@ export default function ServicesPage() {
                         </P>
                     </div>
                     <div className="flex flex-col sm:flex-row gap-3 md:flex-shrink-0">
-                        <Button variant="primary" href="/contact">
+                        <Button variant="primary" href="/contact" className="flex-1">
                             ANFRAGE STELLEN
                         </Button>
-                        <Button variant="outline" href="tel:+4915234002234">
+                        <Button variant="outline" href="tel:+4915234002234" className="flex-1">
                             ANRUFEN
                         </Button>
                     </div>
