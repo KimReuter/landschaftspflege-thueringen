@@ -59,11 +59,6 @@ export const REFERENZEN: Referenz[] = [
       "/images/referenzen/Baumpflege 01/Baumfällungen 4.jpg",
       "/images/referenzen/Baumpflege 01/Baumfällungen 5.jpg",
       "/images/referenzen/Baumpflege 01/Baumfällungen (1).jpg",
-      "/images/referenzen/Baumpflege 01/Foto 02.07.26, 09 41 13.jpg",
-      "/images/referenzen/Baumpflege 01/Foto 02.07.26, 09 43 44.jpg",
-      "/images/referenzen/Baumpflege 01/Foto 02.07.26, 09 44 32.jpg",
-      "/images/referenzen/Baumpflege 01/Foto 02.07.26, 09 45 26.jpg",
-      "/images/referenzen/Baumpflege 01/Foto 02.07.26, 09 47 11.jpg",
     ],
   },
   {
