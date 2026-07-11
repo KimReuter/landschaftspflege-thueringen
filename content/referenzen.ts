@@ -39,6 +39,12 @@ export const SUBTAGS: Partial<Record<LeistungsbereichTag, string[]>> = {
     "Carports u. Gartenhäuser",
     "Spielplätze",
   ],
+  Innenausbau: [
+    "Trockenbau",
+    "Fliesenarbeiten",
+    "Deckenarbeiten",
+    "Fußböden",
+  ],
 };
 
 const PH = (n: number) => Array.from({ length: n }, (_, i) => `/images/referenzen/placeholder.jpg`);
@@ -299,9 +305,31 @@ export const REFERENZEN: Referenz[] = [
     ],
   },
   {
-    id: "innenausbau",
-    title: "Innenausbau",
+    id: "trockenbau",
+    title: "Trockenbau",
     tags: ["Innenausbau"],
+    subtag: "Trockenbau",
+    images: PH(6),
+  },
+  {
+    id: "fliesenarbeiten",
+    title: "Fliesenarbeiten",
+    tags: ["Innenausbau"],
+    subtag: "Fliesenarbeiten",
+    images: PH(6),
+  },
+  {
+    id: "deckenarbeiten",
+    title: "Deckenarbeiten",
+    tags: ["Innenausbau"],
+    subtag: "Deckenarbeiten",
+    images: PH(6),
+  },
+  {
+    id: "fussboeden",
+    title: "Fußböden",
+    tags: ["Innenausbau"],
+    subtag: "Fußböden",
     images: PH(6),
   },
   {
