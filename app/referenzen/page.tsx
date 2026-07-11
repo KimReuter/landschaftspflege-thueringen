@@ -265,10 +265,11 @@ function GroupedView({ tag, onOpen }: { tag: LeistungsbereichTag; onOpen: (r: Re
       {subtags.map((sub, gi) => {
         const projects = taggedProjects.filter(r => r.subtag === sub);
         if (projects.length === 0) return null;
-        // 1 Projekt: alle Bilder zeigen. Mehrere Projekte: 1 Thumbnail pro Projekt.
-        const allImages = projects.length === 1
-          ? projects[0].images.map((src, idx) => ({ src, referenz: projects[0], idx }))
-          : projects.map(r => ({ src: r.images[0], referenz: r, idx: 0 }));
+        // 1 Projekt: alle Bilder zeigen. Mehrere Projekte: 1 Thumbnail pro Projekt (mit Titel + Anzahl).
+        const multiProject = projects.length > 1;
+        const allImages = multiProject
+          ? projects.map(r => ({ src: r.images[0], referenz: r, idx: 0 }))
+          : projects[0].images.map((src, idx) => ({ src, referenz: projects[0], idx }));
         const n = allImages.length;
         const cols = n <= 2 ? n : n === 4 ? 2 : 3;
         // Reihen berechnen: letzte Reihe ggf. zentriert darstellen
@@ -311,12 +312,21 @@ function GroupedView({ tag, onOpen }: { tag: LeistungsbereichTag; onOpen: (r: Re
                       sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                     />
                   )}
-                  <div className="absolute inset-0 bg-surface/0 group-hover:bg-surface/20 transition-colors duration-500" />
-                  {false && (
-                    <div className="absolute bottom-2 right-3 text-[0.6rem] font-semibold text-white/60 bg-surface/70 px-2 py-0.5">
-                      {r.images.length} Fotos
-                    </div>
+                  {/* Dunkler Gradient + Infos nur bei Multi-Projekt-Ansicht */}
+                  {multiProject && (
+                    <>
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
+                      <div className="absolute bottom-0 left-0 right-0 px-3 pb-3 pt-6">
+                        <p className="text-white text-[0.72rem] font-semibold leading-tight truncate drop-shadow">
+                          {r.title}
+                        </p>
+                        <p className="text-white/60 text-[0.6rem] mt-0.5 drop-shadow">
+                          {r.images.length} Fotos ansehen →
+                        </p>
+                      </div>
+                    </>
                   )}
+                  <div className="absolute inset-0 bg-surface/0 group-hover:bg-surface/20 transition-colors duration-500" />
                 </button>
                     ))}
                   </div>
