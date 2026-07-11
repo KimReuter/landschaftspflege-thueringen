@@ -25,7 +25,7 @@ export default function QuoteSection() {
           </div>
 
           <blockquote className="font-[family-name:var(--font-serif-display)] text-[clamp(1.6rem,3.5vw,3rem)] leading-[1.2] tracking-[-0.02em] text-foreground max-w-4xl">
-            Wir sind kein Konzern. Wir sind Menschen,<br />die morgens aufstehen und ihre Arbeit ernst nehmen.<br />Das sieht man am Ergebnis.
+            Wir sind kein Konzern. Wir sind Menschen,<br />die morgens aufstehen und ihre Arbeit ernst nehmen. Das sieht man am Ergebnis.
           </blockquote>
 
           <div className="mt-8 flex items-center gap-4">
