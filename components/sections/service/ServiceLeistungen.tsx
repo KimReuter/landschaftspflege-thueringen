@@ -10,7 +10,7 @@ function LeistungCard({ item, delay }: { item: LeistungItem; delay: number }) {
   return (
     <div
       ref={card.ref}
-      className="group relative bg-surface-2 p-8 md:p-10 overflow-hidden transition-colors duration-300 hover:bg-[#1f1c17]"
+      className="group relative bg-surface-2 p-8 md:p-10 overflow-hidden transition-colors duration-300 hover:bg-[#1f1c17] h-full min-h-[13rem] flex items-center"
       style={{
         opacity: card.visible ? 1 : 0,
         transform: card.visible ? "none" : "translateY(20px)",
@@ -66,7 +66,7 @@ export function ServiceLeistungen({ leistungen }: { leistungen: LeistungItem[] }
           {leistungen.map((l, i) => (
             <div
               key={l.nummer}
-              className={leistungen.length % 2 === 1 && i === leistungen.length - 1 ? "md:col-span-2" : ""}
+              className={`h-full${leistungen.length % 2 === 1 && i === leistungen.length - 1 ? " md:col-span-2" : ""}`}
             >
               <LeistungCard item={l} delay={i * 60} />
             </div>
