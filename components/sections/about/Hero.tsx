@@ -69,7 +69,7 @@ export default function Hero({
           >
             <div className="h-px w-12 bg-white/20 mb-6" />
             <P className="text-white/70 max-w-md text-[1.05rem] leading-relaxed">
-              Gegründet aus Überzeugung, nicht aus Kalkulation.
+              Gegründet aus Überzeugung, nicht aus Kalkulation.<br />
               Wir machen das, was wir können – und nichts anderes.
             </P>
           </div>
