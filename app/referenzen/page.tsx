@@ -341,6 +341,9 @@ function GroupedView({ tag, onOpen }: { tag: LeistungsbereichTag; onOpen: (r: Re
           {ungrouped.map((r, i) => (
             <ProjectCard key={r.id} referenz={r} delay={Math.min(i, 5) * 70} onOpen={(ref) => onOpen(ref, 0)} />
           ))}
+          {Array.from({ length: (3 - (ungrouped.length % 3)) % 3 }).map((_, i) => (
+            <div key={`filler-${i}`} className="bg-surface hidden lg:block" />
+          ))}
         </div>
       )}
     </div>
@@ -452,6 +455,9 @@ export default function ReferenzenPage() {
                   delay={Math.min(i, 5) * 70}
                   onOpen={(ref) => setLightbox({ referenz: ref, index: 0 })}
                 />
+              ))}
+              {Array.from({ length: (3 - (flatFiltered.length % 3)) % 3 }).map((_, i) => (
+                <div key={`filler-${i}`} className="bg-surface hidden lg:block" />
               ))}
             </div>
           )}
