@@ -36,6 +36,7 @@ const STELLEN = [
     titel: "Baumpfleger / Baumkletterer (m/w/d)",
     art: "Vollzeit · Festanstellung",
     ort: "Thüringen",
+    intro: "Du weißt, was du tust, wenn du in der Krone hängst. Wir auch. Bei uns arbeitest du mit erfahrenen Kollegen, modernem Gerät und einem Chef, der selbst auf dem Baum war. Kein Versprechen, das nicht gehalten wird – nur ehrliche Arbeit mit fairem Lohn.",
     aufgaben: [
       "Baumpflegearbeiten mit Hubarbeitsbühnen",
       "Motorsägenschein",
@@ -57,6 +58,7 @@ const STELLEN = [
     titel: "Tiefbauer / Kanalbauer / Zaunbauer (m/w/d)",
     art: "Vollzeit · Festanstellung",
     ort: "Thüringen",
+    intro: "Saubere Ausführung, verlässliche Kollegen, Maschinen die funktionieren. Wenn du handwerklich denkst und weißt wie man eine Baustelle ordentlich abwickelt, bist du bei uns richtig. Wir suchen keine Lückenbüßer – sondern jemanden, auf den wir uns verlassen können.",
     aufgaben: [
       "Pflasterarbeiten",
       "Zaunbau",
@@ -76,6 +78,7 @@ const STELLEN = [
     titel: "Landschaftsgärtner / Allrounder (m/w/d)",
     art: "Vollzeit · Festanstellung",
     ort: "Thüringen",
+    intro: "Kein Tag wie der andere – aber jeden Tag draußen, mit den Händen arbeiten und am Abend sehen was man geschafft hat. Du bist vielseitig, packst an und willst keinen Schreibtischjob? Dann passt du zu uns.",
     aufgaben: [
       "Garten- und Landschaftsbau",
       "Pflasterarbeiten",
@@ -117,7 +120,7 @@ function StelleCard({ stelle }: { stelle: typeof STELLEN[0] }) {
     >
       <div className="mb-8">
         <H2 className="mb-3">{stelle.titel}</H2>
-        <div className="flex flex-wrap gap-3">
+        <div className="flex flex-wrap gap-3 mb-5">
           <span className="text-xs font-semibold tracking-widest uppercase text-brand-accent border border-brand-accent/30 rounded-full px-3 py-1">
             {stelle.art}
           </span>
@@ -125,6 +128,7 @@ function StelleCard({ stelle }: { stelle: typeof STELLEN[0] }) {
             {stelle.ort}
           </span>
         </div>
+        {"intro" in stelle && <P className="text-sm leading-relaxed max-w-2xl">{stelle.intro as string}</P>}
       </div>
 
       {/* Aufgaben */}
