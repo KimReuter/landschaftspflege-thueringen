@@ -208,7 +208,7 @@ function ProjectCard({ referenz, delay, onOpen }: ProjectCardProps) {
 
           {/* Image count badge */}
           <div className="absolute bottom-3 right-3 bg-surface/80 backdrop-blur-sm px-2 py-1 text-[0.6rem] font-semibold tracking-wider text-white/60 uppercase">
-            {referenz.images.length} Fotos
+            {referenz.images.length} {referenz.images.length === 1 ? "Foto" : "Fotos"}
           </div>
 
           {/* Reveal icon */}
