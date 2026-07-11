@@ -111,7 +111,7 @@ export function ServiceReferenzen({ slug }: { slug: SlugType }) {
       }}
     >
       <div className="mx-auto max-w-6xl">
-        <div className="flex items-center justify-between mb-10">
+        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mb-10">
           <div className="flex items-center gap-3">
             <span className="h-px w-8 bg-brand-accent" />
             <Small className="text-brand-accent uppercase tracking-[0.18em] text-[0.7rem] font-semibold">
@@ -120,7 +120,7 @@ export function ServiceReferenzen({ slug }: { slug: SlugType }) {
           </div>
           <Link
             href={alleHref}
-            className="text-[0.7rem] font-semibold tracking-[0.15em] uppercase text-muted hover:text-brand-accent transition-colors duration-200"
+            className="text-[0.7rem] font-semibold tracking-[0.15em] uppercase text-muted hover:text-brand-accent transition-colors duration-200 pl-11 sm:pl-0"
           >
             Alle Referenzen →
           </Link>
