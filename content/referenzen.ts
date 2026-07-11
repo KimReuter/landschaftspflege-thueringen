@@ -118,6 +118,7 @@ export const REFERENZEN: Referenz[] = [
       "/images/referenzen/Tiefbau 03/Pflasterarbeiten/Pflasterarbeiten Rudolstadt Teichel 1/IMG_4674.jpg",
       "/images/referenzen/Tiefbau 03/Pflasterarbeiten/Pflasterarbeiten Rudolstadt Teichel 1/IMG_4743.jpg",
       "/images/referenzen/Tiefbau 03/Pflasterarbeiten/Pflasterarbeiten Rudolstadt Teichel 1/IMG_4804.jpg",
+      "/images/referenzen/Tiefbau 03/Pflasterarbeiten/Pflasterarbeiten Rudolstadt Teichel 1/IMG_4804 (1).jpg",
       "/images/referenzen/Tiefbau 03/Pflasterarbeiten/Pflasterarbeiten Rudolstadt Teichel 1/IMG_4937.jpg",
       "/images/referenzen/Tiefbau 03/Pflasterarbeiten/Pflasterarbeiten Rudolstadt Teichel 1/IMG_4943.jpg",
       "/images/referenzen/Tiefbau 03/Pflasterarbeiten/Pflasterarbeiten Rudolstadt Teichel 1/JBGX6194.jpg",
