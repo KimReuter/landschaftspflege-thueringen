@@ -7,14 +7,14 @@ import { useReveal } from "@/hooks/useReveal";
 interface CtaBandProps {
   label?: string;
   headline?: React.ReactNode;
-  subtext?: string;
+  subtext?: React.ReactNode;
   primaryLabel?: string;
 }
 
 export function CtaBand({
   label = "Projekt starten",
   headline = <>Überzeugen Sie sich selbst.<br /><em className="not-italic text-brand-accent">Kostenlos.</em></>,
-  subtext = "Kein Formular-Chaos. Kein Callcenter. Sie rufen an oder schreiben – ich melde mich. Persönlich. Direkt. Ohne Umwege.",
+  subtext = <>Kein Formular-Chaos. Kein Callcenter.<br />Sie rufen an oder schreiben –<br />ich melde mich. Persönlich. Direkt. Ohne Umwege.</>,
   primaryLabel = "Gespräch starten",
 }: CtaBandProps) {
   const { ref, visible } = useReveal<HTMLDivElement>();
