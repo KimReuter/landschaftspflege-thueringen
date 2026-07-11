@@ -39,16 +39,19 @@ export default function TimelineItem({
         </span>
       </div>
 
-      {/* Dot */}
-      <div className="relative flex-shrink-0 mt-[0.2rem] flex flex-col items-center">
+      {/* Dot + Linie zum nächsten Item */}
+      <div className="relative flex-shrink-0 mt-[0.2rem] flex flex-col items-center self-stretch">
         <div
           className={[
-            "w-3 h-3 rounded-full border-2 transition-all duration-400 z-10",
+            "w-3 h-3 rounded-full border-2 transition-all duration-400 z-10 flex-shrink-0",
             isLast
               ? "border-brand-accent bg-brand-accent shadow-[0_0_10px_rgba(171,86,27,0.5)]"
               : "border-muted/30 bg-surface-2 group-hover:border-brand-accent group-hover:bg-brand-accent/20",
           ].join(" ")}
         />
+        {!isLast && (
+          <div className="flex-1 w-px bg-gradient-to-b from-border to-border/40 mt-1" />
+        )}
       </div>
 
       {/* Inhalt */}
