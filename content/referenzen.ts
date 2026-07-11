@@ -384,7 +384,7 @@ export const REFERENZEN: Referenz[] = [
   },
   {
     id: "landhausmauer-1",
-    title: "Landhausmauer 1",
+    title: "Landhausmauer",
     tags: ["Gartenbau"],
     subtag: "Mauerbau",
     images: [
