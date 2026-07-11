@@ -128,7 +128,7 @@ function StelleCard({ stelle }: { stelle: typeof STELLEN[0] }) {
             {stelle.ort}
           </span>
         </div>
-        {"intro" in stelle && <P className="text-sm leading-relaxed max-w-2xl">{stelle.intro as string}</P>}
+        {"intro" in stelle && <P className="text-sm leading-relaxed">{stelle.intro as string}</P>}
       </div>
 
       {/* Aufgaben */}
