@@ -7,28 +7,54 @@ import { REFERENZEN, type Referenz } from "@/content/referenzen";
 import type { SlugType } from "@/content/services/types";
 
 const SERVICE_REFERENZEN: Record<SlugType, string[]> = {
-  landschaftspflege: ["baumpflege"],
-  gartenbau: ["pflanzung", "koenitz-aussenanlage"],
+  landschaftspflege: [
+    "kletterarbeiten-kronenpflege",
+    "baumfaellungen",
+    "rodung-entbuschung",
+    "koenitz-aussenanlage",
+    "pflanzung",
+    "wurzelstockentfernung",
+  ],
+  gartenbau: [
+    "landhausmauer-1",
+    "holz-senkrecht-zaun",
+    "hochbeet-holz",
+    "teich-seisla",
+    "carports-gartenhauser",
+    "spielplatz-schwarza",
+  ],
   innenbereich: [
+    "pflasterarbeiten-rudolstadt",
+    "pflasterarbeiten-koenitz",
     "feuerwehrzufahrt-poessneck",
-    "parkplatz-poessneck",
-    "baustelle-rudolstadt",
     "granitpflaster",
-    "pflaster-vorwerk",
+    "abwasser-wasser-strom",
     "trockenlegung-keller",
   ],
   sonstiges: [
-    "hochbeet-1",
-    "hochbeet-2-stein",
-    "kammmolchgewaesser",
-    "koenitz-aussenanlage",
-    "l-steinmauer",
-    "mauerbau",
-    "rasengitter",
+    "landhausmauer-1",
+    "holz-senkrecht-zaun",
+    "hochbeet-holz",
     "teich-seisla",
+    "carports-gartenhauser",
+    "spielplatz-schwarza",
   ],
-  innenausbau: ["innenausbau"],
+  innenausbau: [
+    "trockenbau",
+    "fliesenarbeiten",
+    "deckenarbeiten",
+    "fussboeden",
+  ],
   "sonstige-leistungen": [],
+};
+
+const SERVICE_TAG: Record<SlugType, string> = {
+  landschaftspflege: "Baumarbeiten",
+  gartenbau: "Gartenbau",
+  innenbereich: "Tiefbau",
+  sonstiges: "Gartenbau",
+  innenausbau: "Innenausbau",
+  "sonstige-leistungen": "",
 };
 
 function ReferenzCard({ referenz }: { referenz: Referenz }) {
@@ -69,6 +95,8 @@ export function ServiceReferenzen({ slug }: { slug: SlugType }) {
   const projekte = ids
     .map(id => REFERENZEN.find(r => r.id === id))
     .filter((r): r is Referenz => r !== undefined);
+  const tag = SERVICE_TAG[slug];
+  const alleHref = tag ? `/referenzen?tag=${encodeURIComponent(tag)}` : "/referenzen";
 
   if (projekte.length === 0) return null;
 
@@ -91,7 +119,7 @@ export function ServiceReferenzen({ slug }: { slug: SlugType }) {
             </Small>
           </div>
           <Link
-            href="/referenzen"
+            href={alleHref}
             className="text-[0.7rem] font-semibold tracking-[0.15em] uppercase text-muted hover:text-brand-accent transition-colors duration-200"
           >
             Alle Referenzen →
