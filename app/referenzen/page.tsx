@@ -265,8 +265,10 @@ function GroupedView({ tag, onOpen }: { tag: LeistungsbereichTag; onOpen: (r: Re
       {subtags.map((sub, gi) => {
         const projects = taggedProjects.filter(r => r.subtag === sub);
         if (projects.length === 0) return null;
-        // Alle Bilder aller Projekte als Thumbnails — Klick öffnet Lightbox des jeweiligen Projekts
-        const allImages = projects.flatMap(r => r.images.map((src, idx) => ({ src, referenz: r, idx })));
+        // 1 Projekt: alle Bilder zeigen. Mehrere Projekte: 1 Thumbnail pro Projekt.
+        const allImages = projects.length === 1
+          ? projects[0].images.map((src, idx) => ({ src, referenz: projects[0], idx }))
+          : projects.map(r => ({ src: r.images[0], referenz: r, idx: 0 }));
         const n = allImages.length;
         const cols = n <= 2 ? n : n === 4 ? 2 : 3;
         // Reihen berechnen: letzte Reihe ggf. zentriert darstellen
